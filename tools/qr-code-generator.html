@@ -26,6 +26,15 @@
   <meta property="twitter:description" content="Generate a custom WiFi QR code to share networks instantly. Create codes for URLs, contact cards, emails, and plain texts. 100% free and local.">
   <meta property="twitter:image" content="https://toolanity.com/assets/images/og-image.png">
 
+    <!-- Anti-flash inline theme loader -->
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var theme = stored || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="../assets/css/variables.css">
   <link rel="stylesheet" href="../assets/css/base.css">

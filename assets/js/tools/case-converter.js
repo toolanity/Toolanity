@@ -158,6 +158,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (statLines) statLines.textContent = lines.toLocaleString();
   }
 
+  // Ensure default active button is highlighted immediately on page load
+  const initialActiveBtn = document.querySelector(`.case-mode-btn[data-mode="${currentMode}"]`) || modeButtons[0];
+  if (initialActiveBtn) {
+    modeButtons.forEach(b => b.classList.remove("active"));
+    initialActiveBtn.classList.add("active");
+  }
+
   // Bind mode buttons
   modeButtons.forEach(btn => {
     btn.addEventListener("click", () => {

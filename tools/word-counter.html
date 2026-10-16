@@ -26,6 +26,15 @@
   <meta property="twitter:description" content="Use our free word counter and character counter to analyze character counts, sentences, paragraphs, and reading times in real time. Local-first and secure.">
   <meta property="twitter:image" content="https://toolanity.com/assets/images/og-image.png">
 
+    <!-- Anti-flash inline theme loader -->
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var theme = stored || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="../assets/css/variables.css">
   <link rel="stylesheet" href="../assets/css/base.css">
@@ -193,6 +202,10 @@
                 <div id="count-chars-nospace" class="result-value">0</div>
               </div>
               <div class="result-card">
+                <div class="result-label">Spaces</div>
+                <div id="count-spaces" class="result-value">0</div>
+              </div>
+              <div class="result-card">
                 <div class="result-label">Sentences</div>
                 <div id="count-sentences" class="result-value">0</div>
               </div>
@@ -200,9 +213,9 @@
                 <div class="result-label">Paragraphs</div>
                 <div id="count-paragraphs" class="result-value">0</div>
               </div>
-              <div class="result-card">
+              <div class="result-card span-2">
                 <div class="result-label">Read Time</div>
-                <div id="count-readtime" class="result-value">0m</div>
+                <div id="count-readtime" class="result-value">0 min</div>
               </div>
             </div>
 

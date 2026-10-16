@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const wordCountVal = document.getElementById("count-words");
   const charCountVal = document.getElementById("count-chars");
   const charNoSpaceVal = document.getElementById("count-chars-nospace");
+  const spaceCountVal = document.getElementById("count-spaces");
   const sentenceCountVal = document.getElementById("count-sentences");
   const paragraphCountVal = document.getElementById("count-paragraphs");
   const readTimeVal = document.getElementById("count-readtime");
@@ -36,32 +37,35 @@ document.addEventListener("DOMContentLoaded", () => {
     // 1. Character count (with spaces)
     const totalChars = text.length;
 
-    // 2. Character count (no spaces)
-    const charsNoSpace = text.replace(/\s/g, "").length;
+    // 2. Spaces count (literal space characters only, not tabs/newlines)
+    const spaceCount = (text.match(/ /g) || []).length;
 
-    // 3. Word count
+    // 3. Character count (no spaces - literal spaces excluded so Spaces + No Spaces == Characters)
+    const charsNoSpace = totalChars - spaceCount;
+
+    // 4. Word count
     // Trim whitespace and split by any whitespace character(s)
     const wordsArray = text.trim().split(/\s+/).filter(word => word.length > 0);
     const totalWords = wordsArray.length;
 
-    // 4. Sentence count
+    // 5. Sentence count
     // Matches groups ending with sentence markers (. ! ?) followed by whitespace or end of string
     const sentenceArray = text.split(/[.!?]+(?:[\s\n]|$)/).filter(s => s.trim().length > 0);
     const totalSentences = sentenceArray.length;
 
-    // 5. Paragraph count
+    // 6. Paragraph count
     // Split by newlines, filtering out empty entries
     const paragraphArray = text.split(/\n+/).filter(p => p.trim().length > 0);
     const totalParagraphs = paragraphArray.length;
 
-    // 6. Reading Time (based on 200 WPM)
+    // 7. Reading Time (based on 200 WPM)
     let readMinutes = 0;
     if (totalWords > 0) {
       readMinutes = Math.ceil(totalWords / 200);
     }
     const readTimeStr = totalWords > 0 ? `${readMinutes} min` : "0 min";
 
-    // 7. Speaking Time (based on 130 WPM)
+    // 8. Speaking Time (based on 130 WPM)
     let speakMinutes = 0;
     let speakSeconds = 0;
     if (totalWords > 0) {
@@ -74,12 +78,16 @@ document.addEventListener("DOMContentLoaded", () => {
       : "0 minutes, 0 seconds";
 
     // Inject results into UI DOM
-    wordCountVal.textContent = totalWords;
-    charCountVal.textContent = totalChars;
-    charNoSpaceVal.textContent = charsNoSpace;
-    sentenceCountVal.textContent = totalSentences;
-    paragraphCountVal.textContent = totalParagraphs;
+    wordCountVal.textContent = totalWords.toLocaleString();
+    charCountVal.textContent = totalChars.toLocaleString();
+    charNoSpaceVal.textContent = charsNoSpace.toLocaleString();
+    if (spaceCountVal) spaceCountVal.textContent = spaceCount.toLocaleString();
+    sentenceCountVal.textContent = totalSentences.toLocaleString();
+    paragraphCountVal.textContent = totalParagraphs.toLocaleString();
     readTimeVal.textContent = readTimeStr;
     speakTimeVal.textContent = speakTimeStr;
   }
+
+  // Initial calculation
+  performCounts();
 });

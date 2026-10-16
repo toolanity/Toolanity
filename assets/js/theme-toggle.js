@@ -4,10 +4,9 @@
  */
 
 (function () {
-  // Read preference from storage or fallback to device system preference
+  // Read preference from storage or default unconditionally to light mode
   const savedTheme = localStorage.getItem("theme");
-  const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
-  const initialTheme = savedTheme || (systemPrefersLight ? "light" : "dark");
+  const initialTheme = savedTheme || "light";
 
   // Apply immediately to prevent flash
   document.documentElement.setAttribute("data-theme", initialTheme);
@@ -30,7 +29,7 @@ function initThemeToggle() {
 }
 
 function handleToggleClick(e) {
-  const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
+  const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
   const newTheme = currentTheme === "light" ? "dark" : "light";
   
   // Check reduced motion preference

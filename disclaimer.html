@@ -15,6 +15,15 @@
   <meta property="og:description" content="Review the Toolanity disclaimer page. Understand our terms of use, calculations limitations, and liability exemptions for client-side tool outputs.">
   <meta property="og:image" content="https://toolanity.com/assets/images/og-image.png">
 
+    <!-- Anti-flash inline theme loader -->
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var theme = stored || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/base.css">

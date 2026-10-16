@@ -26,6 +26,15 @@
   <meta property="twitter:description" content="Easily convert case online to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, and snake_case. Live instant letter case converter. 100% free.">
   <meta property="twitter:image" content="https://toolanity.com/assets/images/og-image.png">
 
+    <!-- Anti-flash inline theme loader -->
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var theme = stored || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="../assets/css/variables.css">
   <link rel="stylesheet" href="../assets/css/base.css">
