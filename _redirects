@@ -1,0 +1,22 @@
+# Cloudflare Pages Redirects
+# NOTE: Add a new 301 redirect line here every time a new tool or page is published
+# Format: /path/to/page.html /path/to/page 301
+
+# Static Pages
+/index.html / 301
+/about-us.html /about-us 301
+/contact-us.html /contact-us 301
+/privacy-policy.html /privacy-policy 301
+/disclaimer.html /disclaimer 301
+
+# Tool Pages
+/tools/word-counter.html /tools/word-counter 301
+/tools/password-generator.html /tools/password-generator 301
+/tools/qr-code-generator.html /tools/qr-code-generator 301
+/tools/age-calculator.html /tools/age-calculator 301
+/tools/percentage-calculator.html /tools/percentage-calculator 301
+/tools/json-formatter.html /tools/json-formatter 301
+/tools/case-converter.html /tools/case-converter 301
+/tools/color-picker-from-image.html /tools/color-picker-from-image 301
+/tools/bmi-calculator.html /tools/bmi-calculator 301
+/tools/unit-converter.html /tools/unit-converter 301

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- ==========================================
+       SEO METADATA
+       ========================================== -->
+  <title>JSON Formatter &amp; Validator Online (Beautify &amp; Minify) | Toolanity</title>
+  <meta name="description" content="Format, validate, beautify, and minify JSON online. Debug syntax errors with exact line numbers and convert CSV to JSON. 100% private and local in your browser.">
+  
+  <link rel="canonical" href="https://toolanity.com/tools/json-formatter">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://toolanity.com/tools/json-formatter">
+  <meta property="og:title" content="JSON Formatter &amp; Validator Online (Beautify &amp; Minify) | Toolanity">
+  <meta property="og:description" content="Format, validate, beautify, and minify JSON online. Debug syntax errors with exact line numbers and convert CSV to JSON. 100% private and local in your browser.">
+  <meta property="og:image" content="https://toolanity.com/assets/images/og-image.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://toolanity.com/tools/json-formatter">
+  <meta property="twitter:title" content="JSON Formatter &amp; Validator Online (Beautify &amp; Minify) | Toolanity">
+  <meta property="twitter:description" content="Format, validate, beautify, and minify JSON online. Debug syntax errors with exact line numbers and convert CSV to JSON. 100% private and local in your browser.">
+  <meta property="twitter:image" content="https://toolanity.com/assets/images/og-image.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/tools.css">
+
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+
+  <!-- ==========================================
+       SCHEMA MARKUP
+       ========================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "JSON Formatter & Validator",
+    "description": "Clean, beautify, validate, and minify JSON code online with real-time error detection and CSV-to-JSON conversion. Processes 100% locally in browser memory.",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I format JSON in VS Code?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In Visual Studio Code, press Shift + Alt + F on Windows or Shift + Option + F on macOS to automatically trigger the vscode formatter json engine. Alternatively, right-click inside your open JSON document and select 'Format Document'."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I format JSON in Notepad++?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To set up a notepad++ json formatter, open Notepad++, navigate to Plugins > Plugins Admin, search for 'JSTool' or 'JSON Viewer', and install it. Once installed, use Ctrl + Alt + M (for JSTool JSFormat) to beautify raw JSON instantly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I format JSON in Sublime Text?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For Sublime Text, install the popular 'Pretty JSON' package via Package Control (Ctrl+Shift+P > Install Package > Pretty JSON). Once installed, press Ctrl + Alt + J on Windows/Linux or Cmd + Ctrl + J on macOS to format your JSON document."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What causes 'Unexpected token' syntax errors in JSON?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common JSON syntax errors include trailing commas after the last property or array item, single quotes instead of standard double quotes, unquoted property keys, or unescaped control characters. Strict RFC 8259 JSON requires double quotes around all keys and string values."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between beautifying and minifying JSON?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beautifying adds standardized indentation (typically 2 or 4 spaces) and newlines to make complex JSON readable for developers. Minifying strips out all unnecessary whitespace, indentations, and line breaks to minimize payload size for network transmission in REST APIs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my JSON data uploaded or stored on any server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Toolanity processes all formatting, syntax validation, tree parsing, and CSV conversion entirely inside your browser's local JavaScript engine. Your payloads, configuration files, and API responses never leave your computer."
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://toolanity.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Converters",
+        "item": "https://toolanity.com/#converters"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "JSON Formatter / Validator",
+        "item": "https://toolanity.com/tools/json-formatter"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Injected Header Placeholder -->
+  <header id="site-header"></header>
+
+  <main>
+    <!-- Tool Hero Banner -->
+    <section class="tool-hero">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-separator" aria-hidden="true">›</li>
+            <li class="breadcrumb-item"><a href="/#converters">Converters</a></li>
+            <li class="breadcrumb-separator" aria-hidden="true">›</li>
+            <li class="breadcrumb-item current" aria-current="page">JSON Formatter / Validator</li>
+          </ol>
+        </nav>
+        <div class="tool-category-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/></svg>
+          Converters
+        </div>
+        <h1>JSON Formatter &amp; Validator</h1>
+        <p class="tool-tagline">Beautify, inspect, validate, and minify JSON data with instant line-number error reporting and CSV to JSON conversion.</p>
+      </div>
+    </section>
+
+    <!-- Tool Workspace -->
+    <section class="tool-workspace">
+      <div class="container">
+        <!-- Trust Banner -->
+        <div class="tool-trust-shield">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>All tools run in your browser — your files never leave your device.</span>
+        </div>
+
+        <!-- Mode Tabs -->
+        <div class="tab-container" style="margin-bottom: 1.5rem;">
+          <button id="tab-format" class="tab-btn active">Format &amp; Validate JSON</button>
+          <button id="tab-csv" class="tab-btn">CSV to JSON Converter</button>
+        </div>
+
+        <!-- Panel 1: JSON Formatter & Validator -->
+        <div id="panel-format" class="tool-grid">
+          
+          <!-- Input Card -->
+          <div class="panel-card">
+            <div class="panel-card-title">
+              <span>Input Raw JSON</span>
+              <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <button id="btn-sample" class="btn btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">Sample</button>
+                <button id="btn-clear" class="btn btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">Clear</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="json-input" class="visually-hidden">Raw JSON String</label>
+              <textarea id="json-input" class="form-control" style="font-family: monospace; min-height: 280px;" placeholder="Paste raw, unformatted, or minified JSON here..."></textarea>
+            </div>
+
+            <!-- Error Notification Alert -->
+            <div id="json-error-alert" class="hidden" style="background-color: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: var(--radius-md); padding: 0.75rem 1rem; color: #ef4444; font-size: 0.85rem; font-family: monospace;">
+              <strong>Syntax Error:</strong> <span id="json-error-message"></span>
+            </div>
+
+            <!-- Actions Row -->
+            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: space-between; align-items: center;">
+              <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <label for="indent-select" class="form-label" style="font-size: 0.85rem; margin-bottom: 0;">Indent:</label>
+                <select id="indent-select" class="form-control" style="width: auto; padding: 0.35rem 0.65rem; font-size: 0.85rem;">
+                  <option value="2" selected>2 Spaces</option>
+                  <option value="4">4 Spaces</option>
+                  <option value="tab">Tab</option>
+                </select>
+              </div>
+
+              <div style="display: flex; gap: 0.5rem;">
+                <button id="btn-minify" class="btn btn-secondary" style="padding: 0.45rem 1rem; font-size: 0.85rem;">Minify (Compact)</button>
+                <button id="btn-beautify" class="btn btn-primary" style="padding: 0.45rem 1.25rem; font-size: 0.85rem;">Beautify</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Output Card -->
+          <div class="panel-card">
+            <div class="panel-card-title">
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <span>Formatted Result</span>
+                <span id="json-status-badge" class="badge">Waiting for input</span>
+              </div>
+              <div style="display: flex; gap: 0.35rem;">
+                <button id="view-code-btn" class="btn btn-primary" style="padding: 0.3rem 0.65rem; font-size: 0.75rem;">Code View</button>
+                <button id="view-tree-btn" class="btn btn-secondary" style="padding: 0.3rem 0.65rem; font-size: 0.75rem;">Tree View</button>
+              </div>
+            </div>
+
+            <div class="form-group" style="position: relative;">
+              <textarea id="json-output" class="form-control output-textarea" style="min-height: 280px;" readonly placeholder="Formatted and validated JSON will appear here..."></textarea>
+              <div id="json-tree-container" class="form-control hidden" style="min-height: 280px; max-height: 420px; overflow-y: auto; background-color: rgba(10, 12, 11, 0.4);">
+                <div style="color:var(--color-text-muted); font-style:italic;">Enter valid JSON to view interactive tree...</div>
+              </div>
+            </div>
+
+            <!-- Stats & Action Bar -->
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--color-border); padding-top: 0.75rem;">
+              <div style="font-size: 0.8rem; color: var(--color-text-muted); display: flex; gap: 1rem;">
+                <span>Size: <strong id="stat-size" style="color:var(--color-text-primary);">0 B</strong></span>
+                <span>Lines: <strong id="stat-lines" style="color:var(--color-text-primary);">0</strong></span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <span id="copy-feedback" class="copy-feedback hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  Copied!
+                </span>
+                <button id="btn-copy" class="btn btn-primary" style="padding: 0.45rem 1rem; font-size: 0.85rem;">Copy JSON</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Panel 2: CSV to JSON Converter -->
+        <div id="panel-csv" class="tool-grid hidden">
+          <div class="panel-card">
+            <div class="panel-card-title">
+              <span>CSV Input</span>
+              <div style="display: flex; gap: 0.5rem;">
+                <button id="btn-sample-csv" class="btn btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">Sample CSV</button>
+                <button id="btn-clear-csv" class="btn btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">Clear</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="csv-input" class="visually-hidden">Raw CSV Text</label>
+              <textarea id="csv-input" class="form-control" style="font-family: monospace; min-height: 280px;" placeholder="Paste comma, semicolon, or tab-delimited CSV text here..."></textarea>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.75rem;">
+              <div style="display: flex; gap: 1rem; align-items: center;">
+                <div style="display: flex; gap: 0.4rem; align-items: center;">
+                  <label for="csv-delimiter" class="form-label" style="font-size: 0.85rem; margin-bottom: 0;">Delimiter:</label>
+                  <select id="csv-delimiter" class="form-control" style="width: auto; padding: 0.35rem 0.65rem; font-size: 0.85rem;">
+                    <option value="," selected>Comma (,)</option>
+                    <option value=";">Semicolon (;)</option>
+                    <option value="\t">Tab</option>
+                  </select>
+                </div>
+                <label class="checkbox-label" style="font-size: 0.85rem;">
+                  <input type="checkbox" id="csv-headers-check" checked>
+                  First row contains headers
+                </label>
+              </div>
+
+              <button id="btn-convert-csv" class="btn btn-primary" style="padding: 0.45rem 1.25rem; font-size: 0.85rem;">Convert to JSON</button>
+            </div>
+          </div>
+
+          <div class="panel-card">
+            <div class="panel-card-title">
+              <span>Generated JSON Array</span>
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <span id="copy-csv-feedback" class="copy-feedback hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  Copied!
+                </span>
+                <button id="btn-copy-csv" class="btn btn-primary" style="padding: 0.35rem 0.85rem; font-size: 0.8rem;">Copy Output</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <textarea id="csv-output" class="form-control output-textarea" style="min-height: 330px;" readonly placeholder="Converted JSON objects array will appear here..."></textarea>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEO Explainer -->
+    <section class="tool-explainer">
+      <div class="container explainer-content">
+        <h2>What is an Online JSON Formatter and Validator?</h2>
+        <p>A <strong>json formatter</strong> is an essential developer utility that converts unstructured, minified, or single-line JSON text into a clean, human-readable structure with standardized spacing and indentation. JSON (JavaScript Object Notation) is the ubiquitous data interchange format powering modern web APIs, microservices, cloud databases, and configuration systems. When receiving API payloads or analyzing webhooks, raw JSON often arrives without line breaks or whitespace to conserve network bandwidth. Our formatter restores visual hierarchy, highlights structural nesting, and validates parsing rules instantly in your browser.</p>
+
+        <h2>How to Format and Validate JSON Online</h2>
+        <ol>
+          <li><strong>Paste Raw Data:</strong> Paste your unformatted JSON payload, server response, or configuration file into the left-hand text editor.</li>
+          <li><strong>Instant Validation:</strong> As you type or click <strong>Beautify</strong>, the parser immediately tests the string against strict JSON standards (RFC 8259). If an error exists, the exact line and character column are flagged with a diagnostic error message.</li>
+          <li><strong>Choose Indentation or Minify:</strong> Select 2-space, 4-space, or tab indentation depending on your team's code conventions, or click <strong>Minify</strong> to strip all whitespace for efficient API transmission.</li>
+          <li><strong>Explore the Interactive Tree:</strong> Switch to the <strong>Tree View</strong> tab to fold, expand, and visually inspect nested arrays and deep object properties.</li>
+          <li><strong>One-Click Copy:</strong> Click <strong>Copy JSON</strong> to place the clean output directly on your clipboard for your code editor or documentation.</li>
+        </ol>
+
+        <h2>How to Format JSON in Your Favorite Code Editors</h2>
+        <p>While our online tool gives you zero-install convenience on any device without uploading sensitive payloads to remote servers, formatting JSON inside your local IDE is equally important for daily workflows. Here is a quick reference guide for popular text editors:</p>
+
+        <h3>How to Format JSON in VS Code</h3>
+        <p>To use the built-in <strong>vscode formatter json</strong> tool inside Visual Studio Code (<strong>vscode json formatter</strong>), open any <code>.json</code> document and press the global format shortcut:</p>
+        <ul>
+          <li><strong>Windows / Linux:</strong> Press <code>Shift + Alt + F</code></li>
+          <li><strong>macOS:</strong> Press <code>Shift + Option + F</code></li>
+          <li><strong>Command Palette:</strong> Press <code>Ctrl + Shift + P</code> (or <code>Cmd + Shift + P</code>), type <em>Format Document</em>, and hit Enter.</li>
+        </ul>
+        <p>You can also configure automatic formatting on save by adding <code>"editor.formatOnSave": true</code> inside your <code>settings.json</code>.</p>
+
+        <h3>How to Format JSON in Notepad++</h3>
+        <p>To enable a <strong>notepad++ json formatter</strong>, install a dedicated plugin via the built-in package manager:</p>
+        <ol>
+          <li>Open Notepad++ and go to <strong>Plugins &gt; Plugins Admin</strong>.</li>
+          <li>Search for <strong>JSTool</strong> or <strong>JSON Viewer</strong>, check the box, and click <strong>Install</strong>.</li>
+          <li>After Notepad++ restarts, select your JSON content and press <code>Ctrl + Alt + M</code> (via JSTool &gt; JSFormat) to indent and beautify the file instantly.</li>
+        </ol>
+
+        <h3>How to Format JSON in Sublime Text</h3>
+        <p>For Sublime Text users searching for a reliable <strong>sublime json formatter</strong> (or <strong>json formatter for sublime text</strong> / <strong>sublime text json formatter</strong>), the industry standard package is <strong>Pretty JSON</strong>:</p>
+        <ol>
+          <li>Press <code>Ctrl + Shift + P</code> (or <code>Cmd + Shift + P</code> on macOS) to open the Command Palette.</li>
+          <li>Type <code>Install Package</code> and hit Enter, then search for <code>Pretty JSON</code>.</li>
+          <li>Once installed, press <code>Ctrl + Alt + J</code> on Windows or <code>Cmd + Ctrl + J</code> on macOS to format and validate the active JSON file.</li>
+        </ol>
+
+        <h3>Formatting JSON in Notepad and Vim</h3>
+        <p>If you are working in basic Windows Notepad (<strong>notepad json formatter</strong>), Notepad lacks built-in syntax parsers, making our browser-based utility the fastest option. For terminal developers using Vim (<strong>vim json formatter</strong>), you can pipe your buffer through <code>jq</code> or Python directly from normal mode:</p>
+        <p><code>:%!jq .</code> &nbsp;or&nbsp; <code>:%!python3 -m json.tool</code></p>
+
+        <h2>Converting CSV Files to JSON Objects</h2>
+        <p>Our tool also features a robust <strong>CSV to JSON converter</strong>. Relational data exports from Google Sheets, Microsoft Excel, or SQL databases commonly output rows separated by commas or tabs. By pasting tabular CSV data into our converter, each row is dynamically transformed into a structured JSON object where the first-row headers become object keys. Numeric strings and boolean flags (such as <code>true</code> and <code>false</code>) are automatically parsed into their native JSON data types, giving frontend engineers and backend developers instant fixture data for testing REST endpoints and GraphQL queries.</p>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-accordion">
+          
+          <details class="faq-item">
+            <summary>How do I format JSON in VS Code?</summary>
+            <div class="faq-answer">
+              <p>In Visual Studio Code, press <code>Shift + Alt + F</code> on Windows/Linux or <code>Shift + Option + F</code> on macOS to trigger the built-in <strong>vscode formatter json</strong> engine. Alternatively, right-click inside your open document and select <em>Format Document</em>.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I format JSON in Notepad++?</summary>
+            <div class="faq-answer">
+              <p>To set up a <strong>notepad++ json formatter</strong>, open Notepad++, navigate to <em>Plugins &gt; Plugins Admin</em>, search for <strong>JSTool</strong> or <strong>JSON Viewer</strong>, and install it. Once installed, use <code>Ctrl + Alt + M</code> to beautify raw JSON immediately.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I format JSON in Sublime Text?</summary>
+            <div class="faq-answer">
+              <p>For Sublime Text, install the <strong>Pretty JSON</strong> package via Package Control (<code>Ctrl + Shift + P</code> &gt; <em>Package Control: Install Package</em> &gt; <em>Pretty JSON</em>). Then press <code>Ctrl + Alt + J</code> on Windows or <code>Cmd + Ctrl + J</code> on macOS to format the file.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What causes 'Unexpected token' syntax errors in JSON?</summary>
+            <div class="faq-answer">
+              <p>Common JSON syntax errors include trailing commas after the last property or array item, single quotes instead of standard double quotes, unquoted property keys, or unescaped control characters. Strict RFC 8259 JSON requires double quotes around all keys and string values.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is the difference between beautifying and minifying JSON?</summary>
+            <div class="faq-answer">
+              <p>Beautifying adds standardized indentation (typically 2 or 4 spaces) and newlines to make complex JSON readable for developers. Minifying strips out all unnecessary whitespace, indentations, and line breaks to minimize payload size for network transmission in REST APIs.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is my JSON data uploaded or stored on any server?</summary>
+            <div class="faq-answer">
+              <p>No. Toolanity processes all formatting, syntax validation, tree parsing, and CSV conversion entirely inside your browser's local JavaScript engine. Your payloads, configuration files, and API responses never leave your computer.</p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+      <!-- Related Tools -->
+    <section class="related-tools-section">
+      <div class="container">
+        <h2>Related Tools</h2>
+        <div class="cards-grid">
+          <a href="/tools/case-converter" class="tool-card">
+            <div class="tool-card-header">
+              <div class="tool-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 16 4-10 4 10"/><path d="M4.5 12.5h5"/><path d="M15 16v-6c0-1.1.9-2 2-2s2 .9 2 2v6"/><path d="M15 12h4"/></svg>
+              </div>
+            </div>
+            <h3 class="tool-card-name">Case Converter</h3>
+            <p class="tool-card-desc">Convert text to UPPERCASE, lowercase, Title Case, sentence case, camelCase, snake_case, and PascalCase.</p>
+          </a>
+          <a href="/tools/password-generator" class="tool-card">
+            <div class="tool-card-header">
+              <div class="tool-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L21 8l-3-3Z"/></svg>
+              </div>
+            </div>
+            <h3 class="tool-card-name">Password Generator</h3>
+            <p class="tool-card-desc">Generate highly secure random character passwords or memorable word passphrases.</p>
+          </a>
+          <a href="/tools/color-picker-from-image" class="tool-card">
+            <div class="tool-card-header">
+              <div class="tool-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 22 1-1h3l9-9"/><path d="M9.5 9.5 12 7l5 5-2.5 2.5"/><path d="m14 5 3-3 5 5-3 3Z"/></svg>
+              </div>
+            </div>
+            <h3 class="tool-card-name">Color Picker from Image</h3>
+            <p class="tool-card-desc">Extract color codes (HEX, RGB, HSL) from any uploaded image pixel and generate dominant color palettes.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Injected Footer Placeholder -->
+  <footer id="site-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/tools-data.js"></script>
+  <script src="../assets/js/theme-toggle.js"></script>
+  <script src="../assets/js/header.js"></script>
+  <script src="../assets/js/footer.js"></script>
+  <script src="../assets/js/nav-mega-menu.js"></script>
+  <script src="../assets/js/tools/json-formatter.js"></script>
+</body>
+</html>

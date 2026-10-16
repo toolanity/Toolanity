@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- ==========================================
+       SEO METADATA
+       ========================================== -->
+  <title>Chronological Age Calculator &amp; Preemie Corrected Age | Toolanity</title>
+  <meta name="description" content="Calculate chronological age in years, months, and days. Determine age difference or premature baby corrected age with our free secure calculator.">
+  
+  <link rel="canonical" href="https://toolanity.com/tools/age-calculator">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://toolanity.com/tools/age-calculator">
+  <meta property="og:title" content="Chronological Age Calculator &amp; Preemie Corrected Age | Toolanity">
+  <meta property="og:description" content="Calculate chronological age in years, months, and days. Determine age difference or premature baby corrected age with our free secure calculator.">
+  <meta property="og:image" content="https://toolanity.com/assets/images/og-image.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://toolanity.com/tools/age-calculator">
+  <meta property="twitter:title" content="Chronological Age Calculator &amp; Preemie Corrected Age | Toolanity">
+  <meta property="twitter:description" content="Calculate chronological age in years, months, and days. Determine age difference or premature baby corrected age with our free secure calculator.">
+  <meta property="twitter:image" content="https://toolanity.com/assets/images/og-image.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/tools.css">
+
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+
+  <!-- ==========================================
+       SCHEMA MARKUP
+       ========================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Chronological Age Calculator",
+    "description": "Calculate exact chronological age, age difference between two people, or baby corrected age for premature births locally.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is age calculated across a leap year?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Leap years contain 366 days instead of 365, adding February 29. Our chronological age calculator measures chronological milestones based on calendar month transitions, meaning a person born on February 29 officially completes a full calendar year on March 1 in non-leap years."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does corrected age mean for premature babies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Corrected age (or adjusted age) represents a baby's developmental age based on their original due date instead of their actual birth date. It is calculated by subtracting the weeks of prematurity from their chronological age. This helps pediatricians monitor developmental milestones accurately during the first two years."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the age difference calculation work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The age difference tool takes two dates of birth (Person A and Person B), aligns them chronologically, and calculates the exact duration gap between them in total years, months, and days, showing who is older and by how much."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are the dates processed on your server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. All date calculations occur locally on your computer using vanilla JavaScript. No date details or birthday records are ever transmitted over the internet."
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://toolanity.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Calculators",
+        "item": "https://toolanity.com/#calculators"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Age Calculator",
+        "item": "https://toolanity.com/tools/age-calculator"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Injected Header Placeholder -->
+  <header id="site-header"></header>
+
+  <main>
+    <!-- Tool Hero Banner -->
+    <section class="tool-hero">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-separator" aria-hidden="true">›</li>
+            <li class="breadcrumb-item"><a href="/#calculators">Calculators</a></li>
+            <li class="breadcrumb-separator" aria-hidden="true">›</li>
+            <li class="breadcrumb-item current" aria-current="page">Age Calculator</li>
+          </ol>
+        </nav>
+        <div class="tool-category-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+          Calculators
+        </div>
+        <h1>Chronological Age Calculator</h1>
+        <p class="tool-tagline">Calculate your exact chronological age, age difference between two dates, or baby's corrected developmental age instantly.</p>
+      </div>
+    </section>
+
+    <!-- Tool Workspace -->
+    <section class="tool-workspace">
+      <div class="container">
+        <!-- Trust Banner -->
+        <div class="tool-trust-shield">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>All tools run in your browser — your files never leave your device.</span>
+        </div>
+
+        <div class="tool-grid">
+          
+          <!-- Configuration Card -->
+          <div class="panel-card">
+            <h2 class="panel-card-title">Select Calculation Mode</h2>
+            
+            <!-- Mode Tabs -->
+            <div class="tab-container">
+              <button id="age-tab-chrono" class="tab-btn active">Chronological Age</button>
+              <button id="age-tab-diff" class="tab-btn">Age Difference</button>
+              <button id="age-tab-baby" class="tab-btn">Baby Corrected Age</button>
+            </div>
+
+            <!-- TAB 1: CHRONOLOGICAL AGE -->
+            <div id="age-form-chrono" class="checkbox-group">
+              <div class="form-group">
+                <label for="chrono-dob" class="form-label">Date of Birth</label>
+                <input type="date" id="chrono-dob" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label for="chrono-asof" class="form-label">Age as of Date</label>
+                <input type="date" id="chrono-asof" class="form-control">
+              </div>
+            </div>
+
+            <!-- TAB 2: AGE DIFFERENCE -->
+            <div id="age-form-diff" class="checkbox-group hidden">
+              <div class="form-group">
+                <label for="diff-dob1" class="form-label">First Person's Birthdate</label>
+                <input type="date" id="diff-dob1" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label for="diff-dob2" class="form-label">Second Person's Birthdate</label>
+                <input type="date" id="diff-dob2" class="form-control">
+              </div>
+            </div>
+
+            <!-- TAB 3: BABY CORRECTED AGE -->
+            <div id="age-form-baby" class="checkbox-group hidden">
+              <div style="font-size: 0.85rem; padding: 0.75rem 1rem; border-left: 3px solid var(--color-accent); background-color: rgba(5, 150, 105, 0.05); border-radius: var(--radius-sm); margin-bottom: 0.5rem;">
+                <strong>Developmental Estimator:</strong> Corrected age is used for babies born prematurely (before 37 weeks gestation) to evaluate milestone tracking.
+              </div>
+
+              <div class="form-group">
+                <label for="baby-dob" class="form-label">Actual Date of Birth</label>
+                <input type="date" id="baby-dob" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label for="baby-due" class="form-label">Expected Due Date</label>
+                <input type="date" id="baby-due" class="form-control">
+              </div>
+            </div>
+
+            <div class="action-bar" style="margin-top: 1rem;">
+              <button id="calculate-age-btn" class="btn btn-primary" style="width: 100%;">Calculate Age</button>
+            </div>
+          </div>
+
+          <!-- Output Panel Card -->
+          <div class="panel-card">
+            <h2 class="panel-card-title">Calculation Results</h2>
+            
+            <!-- Standard Main result summary -->
+            <div id="age-result-primary" style="font-size: 1.5rem; font-weight: 800; color: var(--color-accent-hover); text-align: center; padding: 1.5rem 0.5rem; border-bottom: 1px solid var(--color-border);">
+              Enter a date above and click Calculate.
+            </div>
+
+            <!-- Results details blocks -->
+            <!-- Details 1: Chronological details (shows exact breakdown + fun facts) -->
+            <div id="details-chrono" class="checkbox-group hidden">
+              <div class="results-grid">
+                <div class="result-card">
+                  <div class="result-label">Years</div>
+                  <div id="val-years" class="result-value">0</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-label">Months</div>
+                  <div id="val-months" class="result-value">0</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-label">Days</div>
+                  <div id="val-days" class="result-value">0</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-label">Next Birthday</div>
+                  <div id="val-countdown" class="result-value" style="font-size: 1.2rem;">0d</div>
+                </div>
+              </div>
+
+              <div style="font-size: 0.9rem; border-top: 1px solid var(--color-border); padding-top: 1rem; margin-top: 0.5rem;">
+                <h3 style="font-size: 1.05rem; margin-bottom: 0.75rem; color: var(--color-accent-hover);">Timeline Fun Facts</h3>
+                <ul style="list-style: none; padding-left: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem;">
+                  <li>Total Months Lived: <strong id="fact-months">0</strong></li>
+                  <li>Total Weeks Lived: <strong id="fact-weeks">0</strong></li>
+                  <li>Total Days Lived: <strong id="fact-days">0</strong></li>
+                  <li>Total Hours Lived: <strong id="fact-hours">0</strong></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Details 2: Age Difference Details -->
+            <div id="details-diff" class="checkbox-group hidden">
+              <div class="results-grid" style="grid-template-columns: 1fr;">
+                <div class="result-card" style="text-align: left; padding: 1.25rem;">
+                  <div id="diff-p1-summary" style="margin-bottom: 0.75rem; font-size: 0.9rem;">Person 1: 0 years old</div>
+                  <div id="diff-p2-summary" style="margin-bottom: 0.75rem; font-size: 0.9rem;">Person 2: 0 years old</div>
+                  <div id="diff-gap-summary" style="border-top: 1px dashed var(--color-border); padding-top: 0.75rem; font-weight: 700; color: var(--color-accent-hover); font-size: 1rem;">Gap: 0 years, 0 months, 0 days</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Details 3: Preemie Baby corrected Details -->
+            <div id="details-baby" class="checkbox-group hidden">
+              <div class="results-grid" style="grid-template-columns: 1fr;">
+                <div class="result-card" style="text-align: left; padding: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                  <div>Chronological Age: <strong id="baby-chrono-val" style="color: var(--color-text-primary);">0 days</strong></div>
+                  <div>Prematurity Duration: <strong id="baby-premature-val" style="color: var(--color-text-primary);">0 weeks</strong></div>
+                  <div style="border-top: 1px dashed var(--color-border); padding-top: 0.75rem;">Corrected Developmental Age: <strong id="baby-corrected-val" style="color: var(--color-accent-hover); font-size: 1.1rem;">0 days</strong></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO Explainer -->
+    <section class="tool-explainer">
+      <div class="container explainer-content">
+        <h2>What is the Chronological Age Calculator?</h2>
+        <p>Our secure <strong>chronological age calculator</strong> is a free, local-first utility designed to determine chronological duration in precise years, months, and days. It handles complex calendar mathematics, accounting for leap years and varying month lengths automatically. Beyond individual records, it contains dedicated secondary layouts for calculating the exact age differences between two birthdates and evaluating a premature baby's corrected developmental age.</p>
+        
+        <h2>How to Calculate Chronological Age</h2>
+        <ol>
+          <li><strong>Select Mode:</strong> Choose the tab corresponding to your calculation requirements (Chronological Age, Age Difference, or Baby Corrected Age).</li>
+          <li><strong>Input Dates:</strong> Enter the relevant Date of Birth, expected due dates, or secondary birthdays using the calendar pickers.</li>
+          <li><strong>Run Math:</strong> Click the "Calculate Age" action button.</li>
+          <li><strong>Review Stats:</strong> Inspect the resulting panel showing years, months, days, countdowns to your next birthday, and fun timeline statistics.</li>
+        </ol>
+
+        <h2>Understanding Leap Years & Calendar Math</h2>
+        <p>Calculating the exact interval between two dates is mathematically complex because the Gregorian calendar does not have constant increments. Months vary from 28 to 31 days, and leap years introduce an extra day (February 29) every four years. A standard <strong>chronological age calculator</strong> computes results by tracking the day of the month. If you are born on a leap day (Feb 29), our tool considers your official year milestones to complete on March 1 during non-leap years, matching legal standards in most regions.</p>
+
+        <h2>What is Baby Corrected Age?</h2>
+        <p>For babies born prematurely (earlier than 37 weeks gestation), developmental milestones are evaluated using their <strong>corrected age</strong> (also called adjusted age). Chronological age counts from their actual day of birth. Corrected age, however, counts from their expected due date. For instance, if a baby is chronologically 16 weeks old but was born 8 weeks early, their corrected developmental age is 8 weeks. This allows pediatricians to evaluate growth, motor skills, and height charts correctly. <em>Note: This tool is informational only and does not replace professional medical evaluations.</em></p>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-accordion">
+          
+          <details class="faq-item">
+            <summary>How is age calculated across a leap year?</summary>
+            <div class="faq-answer">
+              <p>Leap years add a 366th day (February 29). Our calculator tracks transitions based on month dates. If you are born on February 29, the system increments your age by a full year on March 1 during standard 365-day years, and on February 29 during leap years.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What does corrected age mean for premature babies?</summary>
+            <div class="faq-answer">
+              <p>Corrected age represents a preemie's developmental age measured from their original expected due date. It is calculated with the formula: <code>Corrected Age = Chronological Age − Weeks Premature</code>. This adjusted timeline allows parents and doctors to track milestone accomplishments fairly during the first 2 years of life.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How does the age difference calculation work?</summary>
+            <div class="faq-answer">
+              <p>The age difference utility aligns the two birthdates chronologically. It subtracts the earlier date from the later date to identify the exact duration gap. The result displays the age of both individuals and the precise gap between them in years, months, and days.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is there any medical advice associated with this preemie calculator?</summary>
+            <div class="faq-answer">
+              <p>No. The baby corrected age calculator is provided strictly for educational and informational estimation purposes. It is not a clinical tool, and it should never replace formal growth charts, vaccinations schedules, or developmental evaluations provided by your pediatrician.</p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+      <!-- Related Tools -->
+    <section class="related-tools-section">
+      <div class="container">
+        <h2>Related Tools</h2>
+        <div class="cards-grid">
+          <a href="/tools/percentage-calculator" class="tool-card">
+            <div class="tool-card-header">
+              <div class="tool-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+              </div>
+            </div>
+            <h3 class="tool-card-name">Percentage Calculator</h3>
+            <p class="tool-card-desc">Calculate percentage off discounts, percent increase/decrease, differences, and reverse values.</p>
+          </a>
+          <a href="/tools/bmi-calculator" class="tool-card">
+            <div class="tool-card-header">
+              <div class="tool-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              </div>
+            </div>
+            <h3 class="tool-card-name">BMI Calculator</h3>
+            <p class="tool-card-desc">Calculate standard BMI, reverse target weight, amputee-adjusted BMI, and pet dog BMI.</p>
+          </a>
+          <a href="/tools/unit-converter" class="tool-card">
+            <div class="tool-card-header">
+              <div class="tool-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 4 4-4"/><path d="M12 3v18"/><path d="m16 21-4-4-4 4"/></svg>
+              </div>
+            </div>
+            <h3 class="tool-card-name">Unit Converter</h3>
+            <p class="tool-card-desc">Convert units of length, weight, temperature, pressure, torque, voltage, and flow rate.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Injected Footer Placeholder -->
+  <footer id="site-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/tools-data.js"></script>
+  <script src="../assets/js/theme-toggle.js"></script>
+  <script src="../assets/js/header.js"></script>
+  <script src="../assets/js/footer.js"></script>
+  <script src="../assets/js/nav-mega-menu.js"></script>
+  <script src="../assets/js/tools/age-calculator.js"></script>
+</body>
+</html>

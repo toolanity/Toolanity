@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- ==========================================
+       SEO METADATA
+       ========================================== -->
+  <title>Free WiFi QR Code Generator & Multi QR Creator | Toolanity</title>
+  <meta name="description" content="Generate a custom WiFi QR code to share networks instantly. Create codes for URLs, contact cards, emails, and plain texts. 100% free and local.">
+  
+  <link rel="canonical" href="https://toolanity.com/tools/qr-code-generator">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://toolanity.com/tools/qr-code-generator">
+  <meta property="og:title" content="Free WiFi QR Code Generator & Multi QR Creator | Toolanity">
+  <meta property="og:description" content="Generate a custom WiFi QR code to share networks instantly. Create codes for URLs, contact cards, emails, and plain texts. 100% free and local.">
+  <meta property="og:image" content="https://toolanity.com/assets/images/og-image.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://toolanity.com/tools/qr-code-generator">
+  <meta property="twitter:title" content="Free WiFi QR Code Generator & Multi QR Creator | Toolanity">
+  <meta property="twitter:description" content="Generate a custom WiFi QR code to share networks instantly. Create codes for URLs, contact cards, emails, and plain texts. 100% free and local.">
+  <meta property="twitter:image" content="https://toolanity.com/assets/images/og-image.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/tools.css">
+
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+
+  <!-- ==========================================
+       SCHEMA MARKUP
+       ========================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "WiFi QR Code Generator",
+    "description": "Generate QR codes for WiFi connections, URLs, contact details, emails, and text. Completely free and secure client-side generator.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I scan a generated QR code?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most modern smartphones have built-in QR readers. Open your phone's camera app, point it at the QR code, and a prompt link or action notification will display on screen. Tap that notification to execute the action."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do static QR codes expire?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Static QR codes do not expire because the input data is encoded directly into the pattern itself. Since there is no server redirect or backend API database involved, they will work indefinitely as long as the encoded details remain valid."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the WiFi QR type work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "WiFi QR codes follow a standard format (WIFI:S:SSID;T:WPA;P:PASSWORD;;). When a user scans this barcode with their phone, the mobile operating system parses the credentials and connects the smartphone to the network automatically without manual typing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my Wi-Fi password sent to your servers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely not. Toolanity is a local-first platform. Your network names and passwords are processed entirely by local JavaScript inside your browser. The QR code canvas is rendered locally on your device, ensuring complete security."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I create a QR code for my Instagram or Facebook page?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. By using the Social Profile QR generator, you can select platforms like Facebook, Instagram, LinkedIn, Spotify, or TikTok, input your handle or link, and create a scannable barcode that takes users directly to your social profile."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I generate a QR code for PayPal or Venmo payments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Our Payment QR code feature encodes scannable links for PayPal, Venmo, and Zelle. When scanned, it opens the corresponding app or page pre-filled with your handle (and optionally a payment amount for PayPal/Venmo), perfect for tip jars or customer checkouts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's a transparent QR code used for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A transparent QR code removes the white background pixels, exporting only the black modules as a PNG with an alpha channel. This is highly useful for designers who want to overlay QR codes onto colored flyers, resumes, menus, or branded business cards without a white box border."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I create an SMS QR code with a pre-filled message?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. By selecting the SMS tab, you can enter a recipient mobile number and a pre-written text message. Scanning the QR code automatically opens the device's native SMS app with both fields pre-filled, requiring only one click from the user to send."
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://toolanity.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Generators",
+        "item": "https://toolanity.com/#generators"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "QR Code Generator",
+        "item": "https://toolanity.com/tools/qr-code-generator"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Injected Header Placeholder -->
+  <header id="site-header"></header>
+
+  <main>
+    <!-- Tool Hero Banner -->
+    <section class="tool-hero">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-separator" aria-hidden="true">›</li>
+            <li class="breadcrumb-item"><a href="/#generators">Generators</a></li>
+            <li class="breadcrumb-separator" aria-hidden="true">›</li>
+            <li class="breadcrumb-item current" aria-current="page">QR Code Generator</li>
+          </ol>
+        </nav>
+        <div class="tool-category-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v-1a2 2 0 0 0-2-2h-3"/><path d="M11 7h2"/><path d="M7 11v2"/><path d="M11 11h2"/><path d="M11 15h2"/><path d="M15 11h2"/><path d="M15 15h2"/></svg>
+          Generators
+        </div>
+        <h1>Free WiFi QR Code Generator</h1>
+        <p class="tool-tagline">Create custom QR codes. Generate scannable barcodes for WiFi networks, websites, contact cards, emails, and plain text locally.</p>
+      </div>
+    </section>
+
+    <!-- Tool Workspace -->
+    <section class="tool-workspace">
+      <div class="container">
+        <!-- Trust Banner -->
+        <div class="tool-trust-shield">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>All tools run in your browser — your files never leave your device.</span>
+        </div>
+
+        <div class="tool-grid">
+          
+          <!-- Configuration Card -->
+          <div class="panel-card">
+            <h2 class="panel-card-title">Choose QR Code Type</h2>
+            
+            <!-- Type Tabs -->
+            <div class="tab-container" style="flex-wrap: wrap; gap: 0.5rem 0;">
+              <button id="qr-tab-wifi" class="tab-btn active">WiFi Network</button>
+              <button id="qr-tab-url" class="tab-btn">URL/Website</button>
+              <button id="qr-tab-text" class="tab-btn">Plain Text</button>
+              <button id="qr-tab-email" class="tab-btn">Email</button>
+              <button id="qr-tab-vcard" class="tab-btn">vCard Contact</button>
+              <button id="qr-tab-social" class="tab-btn">Social Profile</button>
+              <button id="qr-tab-payment" class="tab-btn">Payment</button>
+              <button id="qr-tab-sms" class="tab-btn">SMS</button>
+            </div>
+
+            <!-- TAB 1: WIFI CONFIG -->
+            <div id="qr-form-wifi" class="checkbox-group">
+              <div class="form-group">
+                <label for="wifi-ssid" class="form-label">Network SSID (Name)</label>
+                <input type="text" id="wifi-ssid" class="form-control" placeholder="My Home Network">
+              </div>
+
+              <div class="form-group">
+                <label for="wifi-password" class="form-label">Network Password</label>
+                <div class="password-input-wrapper" style="position: relative; display: flex; align-items: center; width: 100%;">
+                  <input type="password" id="wifi-password" class="form-control" placeholder="Password123" style="padding-right: 2.75rem; width: 100%;">
+                  <button type="button" id="toggle-wifi-pass-btn" class="toggle-password-btn" aria-label="Show password" style="position: absolute; right: 8px; background: none; border: none; cursor: pointer; color: var(--color-text-muted); display: flex; align-items: center; justify-content: center; padding: 6px; border-radius: var(--radius-sm); outline: none;">
+                    <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.52 13.52 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" x2="22" y1="2" y2="22"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Network Encryption</label>
+                <div class="radio-tabs">
+                  <label class="radio-tab-label">
+                    <input type="radio" name="wifi-security" value="WPA" checked>
+                    <span class="radio-tab-text">WPA / WPA2</span>
+                  </label>
+                  <label class="radio-tab-label">
+                    <input type="radio" name="wifi-security" value="WEP">
+                    <span class="radio-tab-text">WEP</span>
+                  </label>
+                  <label class="radio-tab-label">
+                    <input type="radio" name="wifi-security" value="nopass">
+                    <span class="radio-tab-text">None (Open)</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 2: URL CONFIG -->
+            <div id="qr-form-url" class="checkbox-group hidden">
+              <div class="form-group">
+                <label for="qr-url" class="form-label">Website URL</label>
+                <input type="url" id="qr-url" class="form-control" placeholder="https://example.com">
+              </div>
+            </div>
+
+            <!-- TAB 3: PLAIN TEXT CONFIG -->
+            <div id="qr-form-text" class="checkbox-group hidden">
+              <div class="form-group">
+                <label for="qr-text" class="form-label">Plain Text Content</label>
+                <textarea id="qr-text" class="form-control" placeholder="Type your text content here..." style="min-height: 100px;"></textarea>
+              </div>
+            </div>
+
+            <!-- TAB 4: EMAIL CONFIG -->
+            <div id="qr-form-email" class="checkbox-group hidden">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="qr-email-to" class="form-label">Recipient Email</label>
+                  <input type="email" id="qr-email-to" class="form-control" placeholder="hello@example.com">
+                </div>
+                <div class="form-group">
+                  <label for="qr-email-sub" class="form-label">Email Subject</label>
+                  <input type="text" id="qr-email-sub" class="form-control" placeholder="Inquiry">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="qr-email-body" class="form-label">Email Message Body</label>
+                <textarea id="qr-email-body" class="form-control" placeholder="Type your pre-filled email message here..." style="min-height: 80px;"></textarea>
+              </div>
+            </div>
+
+            <!-- TAB 5: VCARD CONFIG -->
+            <div id="qr-form-vcard" class="checkbox-group hidden">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="vcard-fn" class="form-label">First Name</label>
+                  <input type="text" id="vcard-fn" class="form-control" placeholder="John">
+                </div>
+                <div class="form-group">
+                  <label for="vcard-ln" class="form-label">Last Name</label>
+                  <input type="text" id="vcard-ln" class="form-control" placeholder="Doe">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="vcard-phone" class="form-label">Phone Number</label>
+                  <input type="tel" id="vcard-phone" class="form-control" placeholder="+1234567890">
+                </div>
+                <div class="form-group">
+                  <label for="vcard-email" class="form-label">Email Address</label>
+                  <input type="email" id="vcard-email" class="form-control" placeholder="john@example.com">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="vcard-org" class="form-label">Company Name</label>
+                  <input type="text" id="vcard-org" class="form-control" placeholder="Acme Corp">
+                </div>
+                <div class="form-group">
+                  <label for="vcard-url" class="form-label">Website URL</label>
+                  <input type="url" id="vcard-url" class="form-control" placeholder="https://acme.com">
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 6: SOCIAL PROFILE CONFIG -->
+            <div id="qr-form-social" class="checkbox-group hidden">
+              <div class="form-group">
+                <label for="social-platform" class="form-label">Social Platform</label>
+                <select id="social-platform" class="form-control">
+                  <option value="facebook" selected>Facebook</option>
+                  <option value="instagram">Instagram</option>
+                  <option value="linkedin">LinkedIn</option>
+                  <option value="spotify">Spotify</option>
+                  <option value="tiktok">TikTok</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label id="social-handle-label" for="social-handle" class="form-label">Facebook Profile/Page URL</label>
+                <input type="text" id="social-handle" class="form-control" placeholder="https://facebook.com/username">
+              </div>
+            </div>
+
+            <!-- TAB 7: PAYMENT CONFIG -->
+            <div id="qr-form-payment" class="checkbox-group hidden">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="payment-method" class="form-label">Payment Platform</label>
+                  <select id="payment-method" class="form-control">
+                    <option value="paypal" selected>PayPal</option>
+                    <option value="venmo">Venmo</option>
+                    <option value="zelle">Zelle</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label id="payment-handle-label" for="payment-handle" class="form-label">PayPal Username or PayPal.me Link</label>
+                  <input type="text" id="payment-handle" class="form-control" placeholder="https://paypal.me/username">
+                </div>
+              </div>
+              <div class="form-row" id="payment-extra-row">
+                <div class="form-group" id="payment-amount-group">
+                  <label for="payment-amount" class="form-label">Amount (Optional, $)</label>
+                  <input type="number" id="payment-amount" class="form-control" placeholder="10.00" min="0" step="any">
+                </div>
+                <div class="form-group hidden" id="zelle-name-group">
+                  <label for="zelle-name" class="form-label">Recipient Display Name (Optional)</label>
+                  <input type="text" id="zelle-name" class="form-control" placeholder="John Doe">
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 8: SMS CONFIG -->
+            <div id="qr-form-sms" class="checkbox-group hidden">
+              <div class="form-group">
+                <label for="sms-phone" class="form-label">Phone Number (Include country code)</label>
+                <input type="tel" id="sms-phone" class="form-control" placeholder="+15551234567">
+              </div>
+              <div class="form-group">
+                <label for="sms-message" class="form-label">Pre-filled Message (Optional)</label>
+                <textarea id="sms-message" class="form-control" placeholder="Type pre-filled text here..." style="min-height: 80px;"></textarea>
+              </div>
+            </div>
+
+            <!-- Common Design controls -->
+            <div style="border-top: 1px solid var(--color-border); padding-top: 1rem; margin-top: 0.5rem; display: flex; flex-direction: column; gap: 1rem;">
+              <div class="slider-container">
+                <div class="slider-header">
+                  <label for="qr-size-slider" class="form-label">QR Code Size (px)</label>
+                  <span id="qr-size-val" class="slider-value">250</span>
+                </div>
+                <input type="range" id="qr-size-slider" class="slider-control" min="150" max="400" step="10" value="250">
+              </div>
+              <div class="checkbox-group-row" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 0.25rem;">
+                <input type="checkbox" id="qr-transparent-toggle" class="form-checkbox" style="width: 18px; height: 18px; cursor: pointer; accent-color: var(--color-accent);">
+                <label for="qr-transparent-toggle" class="form-label" style="margin-bottom: 0; cursor: pointer; font-size: 0.9rem;">Transparent Background</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Preview & Download Card -->
+          <div class="panel-card" style="align-items: center; justify-content: center;">
+            <h2 class="panel-card-title" style="width: 100%;">Generated QR Code</h2>
+            
+            <div class="qr-preview-container">
+              <canvas id="qr-canvas"></canvas>
+            </div>
+
+            <div class="action-bar" style="width: 100%; margin-top: 1.25rem;">
+              <button id="download-qr-btn" class="btn btn-primary" style="width: 100%;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download QR Code (PNG)
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO Explainer -->
+    <section class="tool-explainer">
+      <div class="container explainer-content">
+        <h2>What is the WiFi QR Code Generator?</h2>
+        <p>Our online <strong>wifi qr code generator</strong> is a local-first browser tool designed to encode data patterns into scannable QR tags. The standout feature is its ability to build direct WiFi connection codes. Instead of asking guests to type long, complicated wireless passwords, you encode the network credentials into a QR barcode. Guests can scan this tag with their phone cameras, which will connect their mobile device to your home network automatically.</p>
+        
+        <h2>How to Generate a QR Code</h2>
+        <ol>
+          <li><strong>Select Type:</strong> Choose the tab corresponding to your input: WiFi Network, URL/Website, Plain Text, Email, vCard Contact, Social Profile, Payment, or SMS.</li>
+          <li><strong>Fill in Details:</strong> Provide SSID and Passwords for Wi-Fi networks, links for Social Profiles, recipient details for Payments, or target numbers for SMS.</li>
+          <li><strong>Adjust Dimensions:</strong> Drag the pixel slider to size the QR canvas from 150px up to 400px. Optionally check "Transparent Background" to strip the white bounding box.</li>
+          <li><strong>Export Image:</strong> Click the "Download QR Code (PNG)" button to save the generated barcode to your local file system.</li>
+        </ol>
+
+        <div style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.5rem; margin: 2rem 0; box-shadow: var(--shadow-sm);">
+          <h3 style="margin-top: 0; color: var(--color-accent-hover); font-size: 1.15rem;">Popular QR Code Use Cases</h3>
+          <p style="margin-bottom: 0; font-size: 0.95rem;">Many daily applications leverage the standard URL QR code type. For example, individuals frequently generate <strong>resume QR codes</strong> to link printed portfolios directly to LinkedIn profiles or personal portfolios. Similarly, hospitality venues construct <strong>restaurant menu QR codes</strong> to direct dining guests straight to digital PDF food and drink menus, removing the need for physical brochures.</p>
+        </div>
+
+        <h2>Social Profile QR Code Generator</h2>
+        <p>Sharing your digital channels has never been easier. A dedicated <strong>facebook qr code generator</strong> or an <strong>instagram qr code generator</strong> creates a direct scannable path to your online profiles. Instead of spelling out complicated handles or search terms, users scan the code with their mobile devices to instantly launch your profile page. This is highly useful for banners, storefronts, and marketing materials across Facebook, Instagram, LinkedIn, Spotify, and TikTok.</p>
+
+        <h2>Payment QR Code Generator</h2>
+        <p>Facilitate frictionless client transactions by compiling scannable payment tokens. A custom <strong>paypal qr code generator</strong> or a <strong>venmo qr code generator</strong> compiles your account handle and optional payment amounts directly into QR data. When scanned, it automatically redirects customers to the corresponding payment application with transaction details pre-filled. This is an optimal solution for tip jars, farmer's markets, splitting dinner bills, or sending money transfers via PayPal, Venmo, or Zelle.</p>
+
+        <h2>SMS QR Code Generator</h2>
+        <p>Initiate text message responses instantly using an <strong>sms qr code generator</strong>. This utility encodes a recipient phone number and an optional pre-written message string into a single code. When a user scans the code, their device's native messaging application is launched, pre-addressing the message. It is widely applied for event RSVPs, customer feedback requests, or quick subscription submissions where manual number typing is inconvenient.</p>
+
+        <h2>Understanding Static QR Codes</h2>
+        <p>QR (Quick Response) codes are two-dimensional matrix codes that embed information inside black-and-white grid segments. Because they are static, the data is coded natively into the grid. Static codes do not rely on server redirects or remote APIs to resolve, meaning they <strong>never expire</strong>. They remain functional forever as long as the underlying credentials (like the WiFi password or site URL) stay the same.</p>
+
+        <p>This local-first architecture provides unparalleled privacy. In traditional generators, inputs (especially sensitive items like WiFi security keys, payment details, or contact cards) are logged in remote servers. With Toolanity, all calculations occur inside your browser using the local <code>qrcode.min.js</code> canvas library, ensuring your credentials are never exposed.</p>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-accordion">
+          
+          <details class="faq-item">
+            <summary>How do I scan a generated QR code?</summary>
+            <div class="faq-answer">
+              <p>Simply open your mobile phone's built-in camera app, center the QR code inside the viewfinder, and wait a second. Your phone's operating system will detect the pattern and render a banner popup. Tap the banner to execute the action (such as loading the site URL or connecting to the WiFi network).</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do static QR codes expire?</summary>
+            <div class="faq-answer">
+              <p>No. Static QR codes never expire. Because all values (such as network keys or emails) are embedded directly inside the pixel dots, they will function indefinitely. There are no external databases or redirection servers involved.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How does the WiFi QR type work?</summary>
+            <div class="faq-answer">
+              <p>When you fill in the WiFi settings, our generator compiles the data into the official string format: <code>WIFI:S:SSID_Name;T:WPA;P:Password_Key;;</code>. When a phone scans this string, its camera app interprets the structure as network settings, prompts the user to join, and establishes the connection automatically.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is my Wi-Fi password sent to your servers?</summary>
+            <div class="faq-answer">
+              <p>No. Absolutely not. The generator uses local JavaScript libraries to compute and render the canvas elements. Your wireless passwords and credentials remain strictly inside your browser memory, keeping your network connection secure.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I create a QR code for my Instagram or Facebook page?</summary>
+            <div class="faq-answer">
+              <p>Yes, absolutely. By using the Social Profile QR generator, you can select platforms like Facebook, Instagram, LinkedIn, Spotify, or TikTok, input your handle or link, and create a scannable barcode that takes users directly to your social profile.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I generate a QR code for PayPal or Venmo payments?</summary>
+            <div class="faq-answer">
+              <p>Yes. Our Payment QR code feature encodes scannable links for PayPal, Venmo, and Zelle. When scanned, it opens the corresponding app or page pre-filled with your handle (and optionally a payment amount for PayPal/Venmo), perfect for tip jars or customer checkouts.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What's a transparent QR code used for?</summary>
+            <div class="faq-answer">
+              <p>A transparent QR code removes the white background pixels, exporting only the black modules as a PNG with an alpha channel. This is highly useful for designers who want to overlay QR codes onto colored flyers, resumes, menus, or branded business cards without a white box border.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I create an SMS QR code with a pre-filled message?</summary>
+            <div class="faq-answer">
+              <p>Yes. By selecting the SMS tab, you can enter a recipient mobile number and a pre-written text message. Scanning the QR code automatically opens the device's native SMS app with both fields pre-filled, requiring only one click from the user to send.</p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+      <!-- Related Tools -->
+    <section class="related-tools-section">
+      <div class="container">
+        <h2>Related Tools</h2>
+        <div class="cards-grid">
+          <a href="/tools/password-generator" class="tool-card">
+            <div class="tool-card-header">
+              <div class="tool-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L21 8l-3-3Z"/></svg>
+              </div>
+            </div>
+            <h3 class="tool-card-name">Password Generator</h3>
+            <p class="tool-card-desc">Generate highly secure random character passwords or memorable word passphrases.</p>
+          </a>
+          <a href="/tools/color-picker-from-image" class="tool-card">
+            <div class="tool-card-header">
+              <div class="tool-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 22 1-1h3l9-9"/><path d="M9.5 9.5 12 7l5 5-2.5 2.5"/><path d="m14 5 3-3 5 5-3 3Z"/></svg>
+              </div>
+            </div>
+            <h3 class="tool-card-name">Color Picker from Image</h3>
+            <p class="tool-card-desc">Extract color codes (HEX, RGB, HSL) from any uploaded image pixel and generate dominant color palettes.</p>
+          </a>
+          <a href="/tools/unit-converter" class="tool-card">
+            <div class="tool-card-header">
+              <div class="tool-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 4 4-4"/><path d="M12 3v18"/><path d="m16 21-4-4-4 4"/></svg>
+              </div>
+            </div>
+            <h3 class="tool-card-name">Unit Converter</h3>
+            <p class="tool-card-desc">Convert units of length, weight, temperature, pressure, torque, voltage, and flow rate.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Injected Footer Placeholder -->
+  <footer id="site-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/tools-data.js"></script>
+  <!-- Local QR code helper library (QRious) -->
+  <script src="../assets/js/qrcode.min.js"></script>
+  
+  <script src="../assets/js/theme-toggle.js"></script>
+  <script src="../assets/js/header.js"></script>
+  <script src="../assets/js/footer.js"></script>
+  <script src="../assets/js/nav-mega-menu.js"></script>
+  <script src="../assets/js/tools/qr-code-generator.js"></script>
+</body>
+</html>

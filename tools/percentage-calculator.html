@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- ==========================================
+       SEO METADATA
+       ========================================== -->
+  <title>Percentage Off Calculator &amp; Multi Percentage Tool | Toolanity</title>
+  <meta name="description" content="Calculate discounts easily with our percentage off calculator. Find percentage difference, reverse percentages, or value changes instantly and securely.">
+  
+  <link rel="canonical" href="https://toolanity.com/tools/percentage-calculator">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://toolanity.com/tools/percentage-calculator">
+  <meta property="og:title" content="Percentage Off Calculator &amp; Multi Percentage Tool | Toolanity">
+  <meta property="og:description" content="Calculate discounts easily with our percentage off calculator. Find percentage difference, reverse percentages, or value changes instantly and securely.">
+  <meta property="og:image" content="https://toolanity.com/assets/images/og-image.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://toolanity.com/tools/percentage-calculator">
+  <meta property="twitter:title" content="Percentage Off Calculator &amp; Multi Percentage Tool | Toolanity">
+  <meta property="twitter:description" content="Calculate discounts easily with our percentage off calculator. Find percentage difference, reverse percentages, or value changes instantly and securely.">
+  <meta property="twitter:image" content="https://toolanity.com/assets/images/og-image.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/tools.css">
+
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+
+  <!-- ==========================================
+       SCHEMA MARKUP
+       ========================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Percentage Calculator & Discount Tool",
+    "description": "Calculate percentage off discounts, percent increase or decrease, values difference, and reverse base percentages locally in your browser.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between percentage change and percentage points?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Percentage change measures the relative change between two values (e.g. if an interest rate grows from 10% to 12%, that is a 20% relative increase). Percentage points measure the simple arithmetic difference between the two percentages (e.g. 10% to 12% is a 2 percentage point increase)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you calculate a discount manually?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To calculate a discount manually in plain English: first, multiply the original price by the discount percentage. Next, divide the result by 100 to get the discount amount. Finally, subtract this discount amount from the original price to find your final sale price."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does reverse percentage work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Reverse percentage is used to find the original value when you only know the final discounted or increased value and the percentage rate applied. For example, if a price is $80 after a 20% discount, you divide the final price by (1 minus the rate as a decimal): $80 / 0.80 = $100 original price."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are calculations calculated on a server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. All percentage math operations run instantly in your web browser using local client-side JavaScript. No data is ever transmitted to a server."
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://toolanity.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Calculators",
+        "item": "https://toolanity.com/#calculators"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Percentage Calculator",
+        "item": "https://toolanity.com/tools/percentage-calculator"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Injected Header Placeholder -->
+  <header id="site-header"></header>
+
+  <main>
+    <!-- Tool Hero Banner -->
+    <section class="tool-hero">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-separator" aria-hidden="true">›</li>
+            <li class="breadcrumb-item"><a href="/#calculators">Calculators</a></li>
+            <li class="breadcrumb-separator" aria-hidden="true">›</li>
+            <li class="breadcrumb-item current" aria-current="page">Percentage Calculator</li>
+          </ol>
+        </nav>
+        <div class="tool-category-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+          Calculators
+        </div>
+        <h1>Percentage Off Calculator</h1>
+        <p class="tool-tagline">Calculate retail discounts, percentage differences between numbers, increases or decreases, and reverse base percentages instantly on input.</p>
+      </div>
+    </section>
+
+    <!-- Tool Workspace -->
+    <section class="tool-workspace">
+      <div class="container">
+        <!-- Trust Banner -->
+        <div class="tool-trust-shield">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>All tools run in your browser — your files never leave your device.</span>
+        </div>
+
+        <div class="tool-grid" style="grid-template-columns: 1fr;">
+          
+          <!-- Shared Panel card carrying all tabs and calculations -->
+          <div class="panel-card">
+            <h2 class="panel-card-title">Percentage Worksheets</h2>
+
+            <!-- Mode Tabs -->
+            <div class="tab-container" style="flex-wrap: wrap;">
+              <button id="pct-tab-discount" class="tab-btn active">Discount (Percentage Off)</button>
+              <button id="pct-tab-change" class="tab-btn">Percentage Change (Increase/Decrease)</button>
+              <button id="pct-tab-diff" class="tab-btn">Percentage Difference</button>
+              <button id="pct-tab-reverse" class="tab-btn">Reverse Percentage</button>
+            </div>
+
+            <!-- WORKSHEET 1: DISCOUNT (PERCENTAGE OFF) -->
+            <div id="pct-form-discount" class="pct-form-block">
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                <div class="form-group">
+                  <label for="disc-price" class="form-label">Original Price ($)</label>
+                  <input type="number" id="disc-price" class="form-control" placeholder="100" min="0" step="any">
+                </div>
+                <div class="form-group">
+                  <label for="disc-percent" class="form-label">Discount Rate (%)</label>
+                  <input type="number" id="disc-percent" class="form-control" placeholder="20" min="0" max="100" step="any">
+                </div>
+              </div>
+              <div class="results-grid" style="margin-top: 1.5rem;">
+                <div class="result-card">
+                  <div class="result-label">Sale Price</div>
+                  <div id="disc-val-sale" class="result-value">$80.00</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-label">You Save</div>
+                  <div id="disc-val-save" class="result-value">$20.00</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- WORKSHEET 2: PERCENTAGE CHANGE -->
+            <div id="pct-form-change" class="pct-form-block hidden">
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                <div class="form-group">
+                  <label for="change-v1" class="form-label">Initial Value (From)</label>
+                  <input type="number" id="change-v1" class="form-control" placeholder="50" step="any">
+                </div>
+                <div class="form-group">
+                  <label for="change-v2" class="form-label">Final Value (To)</label>
+                  <input type="number" id="change-v2" class="form-control" placeholder="75" step="any">
+                </div>
+              </div>
+              <div class="results-grid" style="margin-top: 1.5rem; grid-template-columns: 1fr;">
+                <div class="result-card">
+                  <div class="result-label">Percentage Shift</div>
+                  <div id="change-val-shift" class="result-value">+50.00%</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- WORKSHEET 3: PERCENTAGE DIFFERENCE -->
+            <div id="pct-form-diff" class="pct-form-block hidden">
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                <div class="form-group">
+                  <label for="diff-v1" class="form-label">First Value</label>
+                  <input type="number" id="diff-v1" class="form-control" placeholder="40" step="any">
+                </div>
+                <div class="form-group">
+                  <label for="diff-v2" class="form-label">Second Value</label>
+                  <input type="number" id="diff-v2" class="form-control" placeholder="60" step="any">
+                </div>
+              </div>
+              <div class="results-grid" style="margin-top: 1.5rem; grid-template-columns: 1fr;">
+                <div class="result-card">
+                  <div class="result-label">Percentage Difference</div>
+                  <div id="diff-val-result" class="result-value">40.00%</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- WORKSHEET 4: REVERSE PERCENTAGE -->
+            <div id="pct-form-reverse" class="pct-form-block hidden">
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <div class="form-group">
+                  <label for="rev-val" class="form-label">Current Value ($)</label>
+                  <input type="number" id="rev-val" class="form-control" placeholder="80" step="any">
+                </div>
+                <div class="form-group">
+                  <label for="rev-percent" class="form-label">Percentage Rate (%)</label>
+                  <input type="number" id="rev-percent" class="form-control" placeholder="20" step="any">
+                </div>
+                <div class="form-group">
+                  <label for="rev-type" class="form-label">Rate Represents</label>
+                  <select id="rev-type" class="form-control">
+                    <option value="discount" selected>Discount (Value is after % Off)</option>
+                    <option value="increase">Mark up (Value is after % Increase)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="results-grid" style="margin-top: 1.5rem; grid-template-columns: 1fr;">
+                <div class="result-card">
+                  <div class="result-label">Original Base Value</div>
+                  <div id="rev-val-base" class="result-value">$100.00</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO Explainer -->
+    <section class="tool-explainer">
+      <div class="container explainer-content">
+        <h2>What is the Percentage Off Calculator?</h2>
+        <p>Our online <strong>percentage off calculator</strong> is a local-first browser application containing multiple mathematical worksheets to resolve percentage equations. It operates as a discount calculator (Original Price − Discount % = Sale Price) and supports percentage change calculations, percentage differences between two values, and reverse base value calculations. All operations are resolved instantly inside your local browser tab, without transmitting data across networks.</p>
+        
+        <h2>How to Calculate a Discount</h2>
+        <ol>
+          <li><strong>Input Base Details:</strong> Enter the original price of the item (such as $100).</li>
+          <li><strong>Input Rate:</strong> Enter the discount rate being offered (such as 20%).</li>
+          <li><strong>Analyze Instant Results:</strong> Observe the calculations update on input. The tool outputs the final sale price ($80.00) and the total money you save ($20.00) instantly.</li>
+        </ol>
+
+        <h2>Difference Between Percentage Change &amp; Percentage Points</h2>
+        <p>In analytical writing, confusion often arises when discussing changes in percentages. For example, if a mortgage rate increases from 10% to 15%, how do you describe it? The absolute mathematical difference is 5 <strong>percentage points</strong>. However, measured as a relative increase from the starting point, the **percentage change** is 50% (since 5 is 50% of 10). Our tool handles these differences automatically. The Percentage Change tab determines the relative percent change, while the Percentage Difference worksheet measures the variance between two figures relative to their average.</p>
+
+        <h2>How to Calculate Reverse Percentages</h2>
+        <p>A reverse percentage calculation is used to determine the original baseline value when you only have the final altered figure. For example, if you purchase a coat for $80 after a 20% discount, what was its original price? To calculate this manually, think of the final price as representing the remaining percentage. If the discount was 20%, you paid 80% of the original cost (100% − 20%). Divide the final price by the decimal representation of the paid percentage: <code>$80 / 0.80 = $100</code>. Our Reverse Percentage tab handles both discount and mark-up variables instantly.</p>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-accordion">
+          
+          <details class="faq-item">
+            <summary>What is the difference between percentage change and percentage points?</summary>
+            <div class="faq-answer">
+              <p>Percentage change calculates relative shift between numbers (e.g. going from 10% to 15% is a 50% relative increase in the value). Percentage points represent the simple subtraction difference (15% − 10% = 5 percentage points). Distinguishing these avoids misleading statistical reports.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do you calculate a discount manually?</summary>
+            <div class="faq-answer">
+              <p>To calculate a discount manually: multiply the original price by the discount percent (e.g. $120 × 15 = 1800). Next, divide that value by 100 to get your savings ($18). Finally, subtract the savings from the original price to find the sale price ($120 − $18 = $102).</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How does reverse percentage work?</summary>
+            <div class="faq-answer">
+              <p>Reverse percentage returns you to the starting value. If you know a price is $90 after a 10% increase, then $90 represents 110% of the original value. Convert 110% to a decimal (1.10) and divide the final value by it: <code>$90 / 1.10 = $81.82</code> original price.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Are calculations calculated on a server?</summary>
+            <div class="faq-answer">
+              <p>No. Toolanity is a local-first service. All math operations are performed by local JavaScript running inside your web browser. No inputs or price points are uploaded, logged, or processed externally.</p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+      <!-- Related Tools -->
+    <section class="related-tools-section">
+      <div class="container">
+        <h2>Related Tools</h2>
+        <div class="cards-grid">
+          <a href="/tools/age-calculator" class="tool-card">
+            <div class="tool-card-header">
+              <div class="tool-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+              </div>
+            </div>
+            <h3 class="tool-card-name">Age Calculator</h3>
+            <p class="tool-card-desc">Calculate your chronological age, age difference between two people, or baby's corrected age.</p>
+          </a>
+          <a href="/tools/bmi-calculator" class="tool-card">
+            <div class="tool-card-header">
+              <div class="tool-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              </div>
+            </div>
+            <h3 class="tool-card-name">BMI Calculator</h3>
+            <p class="tool-card-desc">Calculate standard BMI, reverse target weight, amputee-adjusted BMI, and pet dog BMI.</p>
+          </a>
+          <a href="/tools/unit-converter" class="tool-card">
+            <div class="tool-card-header">
+              <div class="tool-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 4 4-4"/><path d="M12 3v18"/><path d="m16 21-4-4-4 4"/></svg>
+              </div>
+            </div>
+            <h3 class="tool-card-name">Unit Converter</h3>
+            <p class="tool-card-desc">Convert units of length, weight, temperature, pressure, torque, voltage, and flow rate.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Injected Footer Placeholder -->
+  <footer id="site-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/tools-data.js"></script>
+  <script src="../assets/js/theme-toggle.js"></script>
+  <script src="../assets/js/header.js"></script>
+  <script src="../assets/js/footer.js"></script>
+  <script src="../assets/js/nav-mega-menu.js"></script>
+  <script src="../assets/js/tools/percentage-calculator.js"></script>
+</body>
+</html>

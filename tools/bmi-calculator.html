@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- ==========================================
+       SEO METADATA
+       ========================================== -->
+  <title>Reverse BMI Calculator - Target Weight &amp; Amputee Tool | Toolanity</title>
+  <meta name="description" content="Calculate your target weight with our reverse BMI calculator. Features standard BMI, amputee-adjusted formulas, lean body mass estimates, and dog BMI modes.">
+  
+  <link rel="canonical" href="https://toolanity.com/tools/bmi-calculator">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://toolanity.com/tools/bmi-calculator">
+  <meta property="og:title" content="Reverse BMI Calculator - Target Weight &amp; Amputee Tool | Toolanity">
+  <meta property="og:description" content="Calculate your target weight with our reverse BMI calculator. Features standard BMI, amputee-adjusted formulas, lean body mass estimates, and dog BMI modes.">
+  <meta property="og:image" content="https://toolanity.com/assets/images/og-image.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://toolanity.com/tools/bmi-calculator">
+  <meta property="twitter:title" content="Reverse BMI Calculator - Target Weight &amp; Amputee Tool | Toolanity">
+  <meta property="twitter:description" content="Calculate your target weight with our reverse BMI calculator. Features standard BMI, amputee-adjusted formulas, lean body mass estimates, and dog BMI modes.">
+  <meta property="twitter:image" content="https://toolanity.com/assets/images/og-image.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/tools.css">
+
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+
+  <!-- ==========================================
+       SCHEMA MARKUP
+       ========================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Reverse BMI Calculator",
+    "description": "Calculate standard Body Mass Index, target weights with a backwards BMI calculator, amputee-adjusted clinical BMI, and canine body condition locally.",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a reverse BMI calculator and how does it work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A reverse BMI calculator (also called a backwards BMI calculator) reverses the standard BMI formula. Instead of entering your weight to discover your BMI, you enter your height and a target BMI goal to find the exact body weight in kilograms or pounds required to reach that index."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the standard WHO BMI categories?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The World Health Organization (WHO) classifies adult BMI as: Underweight (BMI below 18.5), Normal weight (18.5 to 24.9), Overweight (25.0 to 29.9), Obese Class I (30.0 to 34.9), Obese Class II (35.0 to 39.9), and Obese Class III (40.0 and above)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do BMI thresholds differ in Asian and Korean health guidelines?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Clinical studies established by the WHO Western Pacific Region and Korean Society for the Study of Obesity (KSSO) show that Asian populations, on average, have a higher percentage of visceral body fat at lower BMI values. Consequently, the overweight cutoff is set at BMI 23.0 and the obesity cutoff at BMI 25.0 to detect cardiovascular and metabolic risks earlier."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is an amputee-adjusted BMI and why is it necessary?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standard BMI formulas assume a complete four-limb body mass. When an individual has limb loss, their scale weight is lower, resulting in an artificially deflated BMI that masks obesity or nutritional risks. The clinical amputee BMI formula adjusts scale weight by factoring in the percentage contribution of missing limbs (e.g., 16% for an entire leg) to estimate true metabolic BMI."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between BMI and Lean Body Mass?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "BMI is a simple ratio of total weight to height squared and does not distinguish between adipose fat tissue, skeletal bone density, and muscle mass. Lean body mass (estimated in our lean BMI calculator) calculates the weight of your body excluding fat, helping athletes and fitness enthusiasts assess muscular development."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this BMI calculator intended as medical diagnosis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. This tool is provided solely for informational and educational reference. BMI is an initial screening metric rather than a standalone diagnostic tool. Please consult a licensed physician or healthcare professional before beginning any weight management or nutritional program."
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://toolanity.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Calculators",
+        "item": "https://toolanity.com/#calculators"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "BMI Calculator",
+        "item": "https://toolanity.com/tools/bmi-calculator"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Injected Header Placeholder -->
+  <header id="site-header"></header>
+
+  <main>
+    <!-- Tool Hero Banner -->
+    <section class="tool-hero">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-separator" aria-hidden="true">›</li>
+            <li class="breadcrumb-item"><a href="/#calculators">Calculators</a></li>
+            <li class="breadcrumb-separator" aria-hidden="true">›</li>
+            <li class="breadcrumb-item current" aria-current="page">BMI Calculator</li>
+          </ol>
+        </nav>
+        <div class="tool-category-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+          Calculators
+        </div>
+        <h1>Reverse BMI Calculator</h1>
+        <p class="tool-tagline">Calculate your target weight, explore standard BMI with lean body mass, calculate amputee-adjusted clinical BMI, and check dog body condition.</p>
+      </div>
+    </section>
+
+    <!-- Tool Workspace -->
+    <section class="tool-workspace">
+      <div class="container">
+        <!-- Trust Banner -->
+        <div class="tool-trust-shield">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>All tools run in your browser — your files never leave your device.</span>
+        </div>
+
+        <!-- Mode Tabs -->
+        <div class="tab-container" style="margin-bottom: 1.5rem;">
+          <button id="tab-reverse" class="tab-btn active">Reverse / Target BMI</button>
+          <button id="tab-standard" class="tab-btn">Standard BMI &amp; Lean Mass</button>
+          <button id="tab-amputee" class="tab-btn">Amputee-Adjusted BMI</button>
+          <button id="tab-pet" class="tab-btn">Dog BMI / Condition</button>
+        </div>
+
+        <!-- TAB 1: REVERSE BMI (LEAD TAB) -->
+        <div id="panel-reverse" class="tool-grid">
+          <div class="panel-card">
+            <div class="panel-card-title">
+              <span>Target Weight Parameters</span>
+              <!-- Unit Selector -->
+              <div style="display: flex; gap: 0.75rem; font-size: 0.85rem;">
+                <label class="checkbox-label">
+                  <input type="radio" name="rev-unit" id="rev-unit-metric" checked> Metric (cm / kg)
+                </label>
+                <label class="checkbox-label">
+                  <input type="radio" name="rev-unit" id="rev-unit-imperial"> Imperial (ft / lbs)
+                </label>
+              </div>
+            </div>
+
+            <!-- Target BMI Input -->
+            <div class="form-group">
+              <label for="rev-target-bmi" class="form-label">Desired Target BMI Value:</label>
+              <input type="number" id="rev-target-bmi" class="form-control" value="22" step="0.1" min="15" max="50" placeholder="e.g. 22.0">
+              <span style="font-size: 0.8rem; color: var(--color-text-muted);">Standard normal BMI range is 18.5 to 24.9</span>
+            </div>
+
+            <!-- Height Inputs -->
+            <div id="rev-height-metric-group" class="form-group">
+              <label for="rev-height-cm" class="form-label">Your Height (cm):</label>
+              <input type="number" id="rev-height-cm" class="form-control" value="175" step="0.5" min="50" max="250" placeholder="e.g. 175">
+            </div>
+
+            <div id="rev-height-imperial-group" class="form-group hidden">
+              <label class="form-label">Your Height (Feet &amp; Inches):</label>
+              <div style="display: flex; gap: 0.75rem;">
+                <input type="number" id="rev-height-ft" class="form-control" value="5" min="1" max="8" placeholder="Feet">
+                <input type="number" id="rev-height-in" class="form-control" value="9" min="0" max="11" placeholder="Inches">
+              </div>
+            </div>
+
+            <!-- Current Weight (Optional) -->
+            <div class="form-group">
+              <label id="rev-current-weight-label" for="rev-current-weight" class="form-label">Current Weight (Optional, kg):</label>
+              <input type="number" id="rev-current-weight" class="form-control" value="82" step="0.5" min="20" max="300" placeholder="e.g. 82">
+            </div>
+          </div>
+
+          <!-- Output Card -->
+          <div class="panel-card">
+            <div class="panel-card-title">
+              <span>Target Weight Results</span>
+            </div>
+
+            <div class="results-grid" style="grid-template-columns: 1fr;">
+              <div class="result-card">
+                <div class="result-label">Calculated Target Weight</div>
+                <div id="rev-target-weight-val" class="result-value" style="font-size: 2.25rem;">67.4 kg</div>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; font-size: 0.9rem;">
+                <span style="color: var(--color-text-muted);">Weight Change Needed:</span>
+                <strong id="rev-diff-val" style="color: var(--color-accent);">-14.6 kg needed</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; font-size: 0.9rem;">
+                <span style="color: var(--color-text-muted);">Normal Weight Boundary (18.5 - 24.9):</span>
+                <strong id="rev-healthy-range-val">56.7 kg - 76.3 kg</strong>
+              </div>
+            </div>
+
+            <div style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.4; margin-top: 0.5rem;">
+              💡 <em>Backwards BMI formula:</em> Target Weight = Target BMI &times; (Height in meters)<sup>2</sup>.
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: STANDARD BMI & LEAN MASS -->
+        <div id="panel-standard" class="tool-grid hidden">
+          <div class="panel-card">
+            <div class="panel-card-title">
+              <span>Body Measurements</span>
+              <div style="display: flex; gap: 0.75rem; font-size: 0.85rem;">
+                <label class="checkbox-label">
+                  <input type="radio" name="std-unit" id="std-unit-metric" checked> Metric
+                </label>
+                <label class="checkbox-label">
+                  <input type="radio" name="std-unit" id="std-unit-imperial"> Imperial
+                </label>
+              </div>
+            </div>
+
+            <div id="std-height-metric-group" class="form-group">
+              <label for="std-height-cm" class="form-label">Height (cm):</label>
+              <input type="number" id="std-height-cm" class="form-control" value="175" step="0.5" placeholder="e.g. 175">
+            </div>
+
+            <div id="std-height-imperial-group" class="form-group hidden">
+              <label class="form-label">Height (Feet &amp; Inches):</label>
+              <div style="display: flex; gap: 0.75rem;">
+                <input type="number" id="std-height-ft" class="form-control" value="5" placeholder="Feet">
+                <input type="number" id="std-height-in" class="form-control" value="9" placeholder="Inches">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label id="std-weight-label" for="std-weight" class="form-label">Weight (kg):</label>
+              <input type="number" id="std-weight" class="form-control" value="70" step="0.5" placeholder="e.g. 70">
+            </div>
+          </div>
+
+          <div class="panel-card">
+            <div class="panel-card-title">
+              <span>Standard BMI &amp; Lean Mass</span>
+            </div>
+
+            <div class="results-grid">
+              <div class="result-card">
+                <div class="result-label">Your BMI Score</div>
+                <div id="std-bmi-val" class="result-value">22.9</div>
+              </div>
+              <div class="result-card">
+                <div class="result-label">Classification</div>
+                <div id="std-category-badge" class="badge" style="font-size: 1rem; margin-top: 0.25rem; display: inline-block;">Normal weight</div>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; font-size: 0.9rem;">
+                <span style="color: var(--color-text-muted);">Healthy Weight Range:</span>
+                <strong id="std-healthy-range">56.7 kg - 76.3 kg</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; font-size: 0.9rem;">
+                <span style="color: var(--color-text-muted);">Estimated Lean Body Mass:</span>
+                <strong id="std-lean-mass-val" style="color: var(--color-accent-hover);">~54.1 kg (77% LBM)</strong>
+              </div>
+            </div>
+
+            <div style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.4; margin-top: 0.5rem;">
+              ℹ️ Lean body mass estimates fat-free physical tissue using the Boer formulation.
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: AMPUTEE-ADJUSTED BMI -->
+        <div id="panel-amputee" class="tool-grid hidden">
+          <div class="panel-card">
+            <div class="panel-card-title">
+              <span>Amputee Clinical Parameters</span>
+            </div>
+
+            <div class="form-group">
+              <label for="amp-height" class="form-label">Current Height (cm):</label>
+              <input type="number" id="amp-height" class="form-control" value="175" placeholder="e.g. 175">
+            </div>
+
+            <div class="form-group">
+              <label for="amp-weight" class="form-label">Scale Weight (kg):</label>
+              <input type="number" id="amp-weight" class="form-control" value="65" placeholder="e.g. 65">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Select Missing Limbs (Clinical % Deduction):</label>
+              <div class="checkbox-group" style="font-size: 0.85rem;">
+                <label class="checkbox-label">
+                  <input type="checkbox" class="amp-limb-check" data-pct="0.007"> Hand (0.7%)
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" class="amp-limb-check" data-pct="0.016"> Forearm &amp; Hand (1.6%)
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" class="amp-limb-check" data-pct="0.05"> Entire Arm (5.0%)
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" class="amp-limb-check" data-pct="0.015"> Foot (1.5%)
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" class="amp-limb-check" data-pct="0.044"> Lower Leg Below Knee (4.4%)
+                </label>
+                <label class="checkbox-label" style="font-weight: 600;">
+                  <input type="checkbox" class="amp-limb-check" data-pct="0.16" checked> Entire Leg Above Knee (16.0%)
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-card">
+            <div class="panel-card-title">
+              <span>Amputee Adjusted BMI</span>
+            </div>
+
+            <div class="results-grid">
+              <div class="result-card">
+                <div class="result-label">Adjusted True BMI</div>
+                <div id="amp-adjusted-bmi" class="result-value" style="color: var(--color-accent-hover);">25.3</div>
+              </div>
+              <div class="result-card">
+                <div class="result-label">Unadjusted Raw BMI</div>
+                <div id="amp-unadjusted-bmi" class="result-value" style="color: var(--color-text-muted);">21.2</div>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; font-size: 0.9rem;">
+                <span style="color: var(--color-text-muted);">Adjusted Classification:</span>
+                <span id="amp-category-badge" class="badge">Overweight</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; font-size: 0.9rem;">
+                <span style="color: var(--color-text-muted);">Estimated 4-Limb Body Weight:</span>
+                <strong id="amp-estimated-weight">77.4 kg (16.0% limb reduction)</strong>
+              </div>
+            </div>
+
+            <div style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.4; margin-top: 0.5rem;">
+              🩺 <em>Clinical note:</em> Standard scale measurements understate metabolic weight when limbs are absent. Clinical formula: <code>Weight / (1 - %Missing) / Height²</code>.
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 4: DOG BMI & BODY CONDITION -->
+        <div id="panel-pet" class="tool-grid hidden">
+          <div class="panel-card">
+            <div class="panel-card-title">
+              <span>Canine Assessment</span>
+            </div>
+
+            <div class="form-group">
+              <label for="dog-size" class="form-label">Dog Breed Category:</label>
+              <select id="dog-size" class="form-control">
+                <option value="toy">Toy Breed (e.g. Chihuahua, Pomeranian)</option>
+                <option value="small">Small Breed (e.g. French Bulldog, Beagle)</option>
+                <option value="medium" selected>Medium Breed (e.g. Border Collie, Springer Spaniel)</option>
+                <option value="large">Large Breed (e.g. Golden Retriever, German Shepherd)</option>
+                <option value="giant">Giant Breed (e.g. Great Dane, Mastiff)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="dog-weight" class="form-label">Current Weight (kg):</label>
+              <input type="number" id="dog-weight" class="form-control" value="22" step="0.5" placeholder="e.g. 22">
+            </div>
+
+            <div class="form-group">
+              <label for="dog-rib-feel" class="form-label">Rib &amp; Waist Palpation Check:</label>
+              <select id="dog-rib-feel" class="form-control">
+                <option value="too-thin">Ribs easily felt without fat cover; pronounced hourglass waist</option>
+                <option value="ideal" selected>Ribs easily felt under slight fat; clear waist behind ribs (Ideal)</option>
+                <option value="overweight">Ribs difficult to feel under fat padding; waist indistinct</option>
+                <option value="obese">Heavy fat deposits over spine/base of tail; broad rounded belly</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="panel-card">
+            <div class="panel-card-title">
+              <span>Body Condition Index</span>
+            </div>
+
+            <div class="results-grid" style="grid-template-columns: 1fr;">
+              <div class="result-card">
+                <div class="result-label">Body Condition Score (BCS)</div>
+                <div id="dog-bmi-score" class="result-value" style="font-size: 2.25rem;">5 / 9</div>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; font-size: 0.9rem;">
+                <span style="color: var(--color-text-muted);">Assessment:</span>
+                <strong id="dog-category" style="color: var(--color-accent);">Ideal Body Condition</strong>
+              </div>
+              <div style="font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.5; padding: 0.5rem 0;" id="dog-recommendation">
+                Target weight for Medium (11 - 25 kg) dogs is typically 11 to 25 kg. Your dog appears within a healthy physiological range.
+              </div>
+            </div>
+
+            <div style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.4; margin-top: 0.5rem;">
+              🐾 <em>Veterinary note:</em> Dogs are clinically evaluated using the 9-point Body Condition Score (BCS) system rather than strict height-to-weight human ratios.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEO Explainer -->
+    <section class="tool-explainer">
+      <div class="container explainer-content">
+        <h2>What is a Reverse BMI Calculator?</h2>
+        <p>A <strong>reverse bmi calculator</strong> (often referred to as a <strong>backwards bmi calculator</strong> or <strong>bmi reverse calculator</strong>) is a practical health utility that works in the opposite direction of standard Body Mass Index calculations. Traditional calculators ask for your current weight and height to tell you where you currently land on the index. In contrast, a reverse calculator lets you specify a target BMI (for instance, the optimal middle of the normal category at 22.0) along with your height to reveal the exact target weight required to achieve it. This makes setting realistic fitness, nutritional, and medical goals significantly clearer.</p>
+
+        <h2>How to Calculate Your Reverse Target Weight</h2>
+        <ol>
+          <li><strong>Select Units:</strong> Toggle between Metric (centimeters and kilograms) or Imperial (feet, inches, and pounds).</li>
+          <li><strong>Enter Desired Target BMI:</strong> Input your target goal (the World Health Organization defines a normal BMI as 18.5 to 24.9).</li>
+          <li><strong>Input Height:</strong> Enter your physical height measurement.</li>
+          <li><strong>Optional Current Weight:</strong> Input your present scale weight to immediately calculate the exact difference needed to reach your target milestone.</li>
+        </ol>
+
+        <h2>Standard WHO Categories vs. Korean &amp; Asian BMI Guidelines</h2>
+        <p>The standard adult Body Mass Index classification established by the World Health Organization (WHO) breaks down as follows:</p>
+        <ul>
+          <li><strong>Underweight:</strong> BMI less than 18.5</li>
+          <li><strong>Normal Weight:</strong> BMI 18.5 &ndash; 24.9</li>
+          <li><strong>Overweight:</strong> BMI 25.0 &ndash; 29.9</li>
+          <li><strong>Obese (Class I):</strong> BMI 30.0 &ndash; 34.9</li>
+          <li><strong>Obese (Class II):</strong> BMI 35.0 &ndash; 39.9</li>
+          <li><strong>Obese (Class III / Severe):</strong> BMI 40.0 and above</li>
+        </ul>
+        <p>However, when looking into a <strong>korean bmi calculator</strong> or East Asian population criteria, medical thresholds differ significantly. Per guidelines from the WHO Western Pacific Region and the Korean Society for the Study of Obesity (KSSO), Asian populations tend to exhibit higher body fat percentages and visceral adiposity at lower body weights. As a consequence, health authorities adjust the thresholds: a BMI of <strong>23.0 to 24.9</strong> is classified as overweight, and a BMI of <strong>25.0 or higher</strong> is classified as obese. This adjusted criterion enables earlier screening for type 2 diabetes and hypertension.</p>
+
+        <h2>Understanding the Amputee-Adjusted BMI Calculator</h2>
+        <p>For individuals with physical limb amputations, a standard BMI equation generates misleading conclusions. Because limbs account for a substantial percentage of total anatomical mass (for example, an entire leg constitutes approximately 16% of total body mass), the scale reads artificially low, creating a false impression of being underweight when metabolic tissue and organ fat could actually be elevated.</p>
+        <p>Our <strong>bmi amputation calculator</strong> (or <strong>bmi amputee calculator</strong>) applies the peer-reviewed Osterkamp formula to <strong>calculate bmi for amputee</strong> patients by calculating estimated full-body weight before dividing by height squared: <code>Estimated Weight = Actual Weight / (1 - Sum of Amputated Limb Percentages)</code>. This provides occupational therapists, physicians, and individuals with accurate metabolic guidance.</p>
+
+        <h2>Lean Body Mass vs. Standard BMI</h2>
+        <p>A primary limitation of standard BMI is its inability to differentiate between dense skeletal muscle and adipose tissue. Through our <strong>lean bmi calculator</strong> module, we integrate the Boer physiological formula to estimate your lean body mass (fat-free tissue including organs, bones, and muscle). This provides fitness enthusiasts and weightlifters with a more nuanced metric than bare scale weight.</p>
+
+        <h2>Canine Body Condition: BMI for Dogs</h2>
+        <p>Pet owners frequently search for a <strong>bmi dog calculator</strong> or <strong>bmi calculator for dogs</strong>. While quadrupeds cannot be evaluated with human height-weight formulas due to extreme breed diversity (from a 3 kg Chihuahua to a 60 kg Mastiff), veterinarians evaluate canine health using the standardized 9-point Body Condition Score (BCS). Our Pet mode guides you through breed classification and rib palpation checks to assess whether your companion is maintaining an ideal physique.</p>
+
+        <h2>Medical and Ethical Health Disclaimer</h2>
+        <p>Toolanity is committed to healthy, factual body composition metrics. This calculator is provided strictly for educational and informational reference. It is not intended to provide medical diagnoses, treatment plans, or encourage extreme weight loss. Please consult a qualified healthcare provider or registered dietitian regarding personal weight goals and clinical treatments.</p>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-accordion">
+          
+          <details class="faq-item">
+            <summary>What is a reverse BMI calculator and how does it work?</summary>
+            <div class="faq-answer">
+              <p>A reverse BMI calculator (also called a backwards BMI calculator) reverses the standard BMI formula. Instead of entering your weight to discover your BMI, you enter your height and a target BMI goal to find the exact body weight in kilograms or pounds required to reach that index.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What are the standard WHO BMI categories?</summary>
+            <div class="faq-answer">
+              <p>The World Health Organization (WHO) classifies adult BMI as: Underweight (BMI below 18.5), Normal weight (18.5 to 24.9), Overweight (25.0 to 29.9), Obese Class I (30.0 to 34.9), Obese Class II (35.0 to 39.9), and Obese Class III (40.0 and above).</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Why do BMI thresholds differ in Asian and Korean health guidelines?</summary>
+            <div class="faq-answer">
+              <p>Clinical studies established by the WHO Western Pacific Region and Korean Society for the Study of Obesity (KSSO) show that Asian populations, on average, have a higher percentage of visceral body fat at lower BMI values. Consequently, the overweight cutoff is set at BMI 23.0 and the obesity cutoff at BMI 25.0 to detect cardiovascular and metabolic risks earlier.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is an amputee-adjusted BMI and why is it necessary?</summary>
+            <div class="faq-answer">
+              <p>Standard BMI formulas assume a complete four-limb body mass. When an individual has limb loss, their scale weight is lower, resulting in an artificially deflated BMI that masks obesity or nutritional risks. The clinical amputee BMI formula adjusts scale weight by factoring in the percentage contribution of missing limbs (e.g., 16% for an entire leg) to estimate true metabolic BMI.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is the difference between BMI and Lean Body Mass?</summary>
+            <div class="faq-answer">
+              <p>BMI is a simple ratio of total weight to height squared and does not distinguish between adipose fat tissue, skeletal bone density, and muscle mass. Lean body mass (estimated in our lean BMI calculator) calculates the weight of your body excluding fat, helping athletes and fitness enthusiasts assess muscular development.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is this BMI calculator intended as medical diagnosis?</summary>
+            <div class="faq-answer">
+              <p>No. This tool is provided solely for informational and educational reference. BMI is an initial screening metric rather than a standalone diagnostic tool. Please consult a licensed physician or healthcare professional before beginning any weight management or nutritional program.</p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+      <!-- Related Tools -->
+    <section class="related-tools-section">
+      <div class="container">
+        <h2>Related Tools</h2>
+        <div class="cards-grid">
+          <a href="/tools/age-calculator" class="tool-card">
+            <div class="tool-card-header">
+              <div class="tool-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+              </div>
+            </div>
+            <h3 class="tool-card-name">Age Calculator</h3>
+            <p class="tool-card-desc">Calculate your chronological age, age difference between two people, or baby's corrected age.</p>
+          </a>
+          <a href="/tools/percentage-calculator" class="tool-card">
+            <div class="tool-card-header">
+              <div class="tool-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+              </div>
+            </div>
+            <h3 class="tool-card-name">Percentage Calculator</h3>
+            <p class="tool-card-desc">Calculate percentage off discounts, percent increase/decrease, differences, and reverse values.</p>
+          </a>
+          <a href="/tools/unit-converter" class="tool-card">
+            <div class="tool-card-header">
+              <div class="tool-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 4 4-4"/><path d="M12 3v18"/><path d="m16 21-4-4-4 4"/></svg>
+              </div>
+            </div>
+            <h3 class="tool-card-name">Unit Converter</h3>
+            <p class="tool-card-desc">Convert units of length, weight, temperature, pressure, torque, voltage, and flow rate.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Injected Footer Placeholder -->
+  <footer id="site-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/tools-data.js"></script>
+  <script src="../assets/js/theme-toggle.js"></script>
+  <script src="../assets/js/header.js"></script>
+  <script src="../assets/js/footer.js"></script>
+  <script src="../assets/js/nav-mega-menu.js"></script>
+  <script src="../assets/js/tools/bmi-calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- ==========================================
+       SEO METADATA
+       ========================================== -->
+  <title>Engineering &amp; Everyday Unit Converter Online | Toolanity</title>
+  <meta name="description" content="Free engineering unit converter for pressure, torque, UK voltage, temperature, flow rate, length, weight, and BTU energy. Instant local calculations.">
+  
+  <link rel="canonical" href="https://toolanity.com/tools/unit-converter">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://toolanity.com/tools/unit-converter">
+  <meta property="og:title" content="Engineering &amp; Everyday Unit Converter Online | Toolanity">
+  <meta property="og:description" content="Free engineering unit converter for pressure, torque, UK voltage, temperature, flow rate, length, weight, and BTU energy. Instant local calculations.">
+  <meta property="og:image" content="https://toolanity.com/assets/images/og-image.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://toolanity.com/tools/unit-converter">
+  <meta property="twitter:title" content="Engineering &amp; Everyday Unit Converter Online | Toolanity">
+  <meta property="twitter:description" content="Free engineering unit converter for pressure, torque, UK voltage, temperature, flow rate, length, weight, and BTU energy. Instant local calculations.">
+  <meta property="twitter:image" content="https://toolanity.com/assets/images/og-image.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/tools.css">
+
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+
+  <!-- ==========================================
+       SCHEMA MARKUP
+       ========================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Engineering & Everyday Unit Converter",
+    "description": "Convert metric and imperial units across mechanical engineering, torque, pressure, UK travel voltage, thermal BTU energy, density, and flow rate locally.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I convert between metric and imperial pressure units?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pressure conversion relies on standard physical factors: 1 bar equals 100,000 Pascals (100 kPa) or approximately 14.5038 psi. For vehicle tyre pressure, 32 psi converts to approximately 2.21 bar or 220.6 kPa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do travelers need a United Kingdom voltage converter?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The United Kingdom operates on 230 volts at 50 Hz, whereas North America operates on 120 volts at 60 Hz. American travelers visiting the UK must verify whether their appliances (like hairdryers or power supplies) are dual-voltage (100-240V) or require an active step-down transformer in addition to a plug adapter to avoid damaging electronics."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are torque units (N·m and ft-lb) used for in engineering?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Torque measures rotational or twisting force around an axis. Mechanical engineers and automotive technicians use Newton-meters (N·m) in metric contexts and foot-pounds (ft-lb) in imperial contexts. One foot-pound equals approximately 1.3558 Newton-meters."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is moment of inertia and why do engineers calculate it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Moment of inertia (expressed in kg·m² or lb·ft²) measures a rigid body's rotational resistance to angular acceleration around a given pivot axis. It is critical for sizing electric motors, flywheels, robotic arms, and rotating industrial machinery."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How are blood glucose and supplement international units (IU) converted?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Blood glucose is measured in mg/dL in the US and mmol/L in the UK and internationally, using a standard biochemical factor of 18.0182 (e.g., 90 mg/dL ÷ 18.0182 = 5.0 mmol/L). Supplement International Units (IU) convert based on substance-specific mass standards (for Vitamin D3, 1 mcg = 40 IU; for natural Vitamin E d-alpha-tocopherol, 1 mg = 1.49 IU). These reference values are informational and must be verified against product packaging or with a healthcare professional."
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://toolanity.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Calculators",
+        "item": "https://toolanity.com/#calculators"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Unit Converter",
+        "item": "https://toolanity.com/tools/unit-converter"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Injected Header Placeholder -->
+  <header id="site-header"></header>
+
+  <main>
+    <!-- Tool Hero Banner -->
+    <section class="tool-hero">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-separator" aria-hidden="true">›</li>
+            <li class="breadcrumb-item"><a href="/#calculators">Calculators</a></li>
+            <li class="breadcrumb-separator" aria-hidden="true">›</li>
+            <li class="breadcrumb-item current" aria-current="page">Unit Converter</li>
+          </ol>
+        </nav>
+        <div class="tool-category-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+          Calculators
+        </div>
+        <h1>Unit Converter</h1>
+        <p class="tool-tagline">Convert between engineering, automotive, travel, and everyday units — including tyre pressure, torque, UK voltage, temperature, and flow rate.</p>
+      </div>
+    </section>
+
+    <!-- Tool Workspace -->
+    <section class="tool-workspace">
+      <div class="container">
+        <!-- Trust Banner -->
+        <div class="tool-trust-shield">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>All tools run in your browser — your files never leave your device.</span>
+        </div>
+
+        <!-- Category Selector Toolbar -->
+        <div class="panel-card" style="margin-bottom: 1.5rem; padding: 1.25rem;">
+          <div class="form-group" style="max-width: 480px; margin: 0 auto; text-align: center;">
+            <label for="converter-category-select" class="form-label" style="font-size: 1rem; margin-bottom: 0.25rem;">Select Measurement Category:</label>
+            <select id="converter-category-select" class="form-control" style="font-size: 1.05rem; padding: 0.65rem 1rem; font-weight: 600;">
+              <optgroup label="Everyday Basics">
+                <option value="length" selected>Length &amp; Distance</option>
+                <option value="weight">Weight &amp; Mass</option>
+                <option value="temperature">Temperature (°C, °F, K)</option>
+              </optgroup>
+              <optgroup label="Engineering &amp; Automotive">
+                <option value="pressure">Pressure &amp; Tyre Pressure (psi, bar, kPa)</option>
+                <option value="torque">Torque (N·m, ft-lb, in-lb)</option>
+                <option value="voltage">Voltage &amp; UK Travel (V, mV, kV)</option>
+                <option value="current">Electrical Current (Amperes, mA)</option>
+                <option value="flow_rate">Flow Rate (L/min, m³/h, CFM, GPM)</option>
+                <option value="density">Density (kg/m³, g/cm³, lb/ft³)</option>
+                <option value="moment_of_inertia">Moment of Inertia (kg·m², lb·ft²)</option>
+                <option value="thermal">Thermal Energy &amp; BTU (J, cal, kWh)</option>
+              </optgroup>
+              <optgroup label="Specialized Reference">
+                <option value="blood_glucose">Blood Glucose (mg/dL ↔ mmol/L)</option>
+                <option value="rack_unit">IT Server Rack Units (U / RU to in/mm)</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <!-- Presets Pill Bar -->
+          <div style="margin-top: 1rem; text-align: center;">
+            <div style="font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">Popular Presets:</div>
+            <div id="presets-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem;">
+              <!-- Dynamically populated preset buttons -->
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-grid">
+          
+          <!-- Conversion Controls -->
+          <div class="panel-card">
+            <div class="panel-card-title">
+              <span>Input &amp; Conversion</span>
+            </div>
+
+            <!-- From Unit Input -->
+            <div class="form-group">
+              <label for="from-value-input" class="form-label">From Value:</label>
+              <input type="number" id="from-value-input" class="form-control" value="1" step="any" placeholder="Enter number...">
+            </div>
+
+            <div class="form-group">
+              <label for="from-unit-select" class="form-label">From Unit:</label>
+              <select id="from-unit-select" class="form-control"></select>
+            </div>
+
+            <!-- Swap Units Button -->
+            <div style="display: flex; justify-content: center; margin: 0.5rem 0;">
+              <button id="btn-swap-units" class="btn btn-secondary" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.45rem 1rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+                Swap Units
+              </button>
+            </div>
+
+            <!-- To Unit Input -->
+            <div class="form-group">
+              <label for="to-unit-select" class="form-label">To Unit:</label>
+              <select id="to-unit-select" class="form-control"></select>
+            </div>
+
+            <div class="form-group">
+              <label for="to-value-input" class="form-label">Converted Result:</label>
+              <input type="text" id="to-value-input" class="form-control output-textarea" style="font-weight: 800; font-size: 1.35rem; min-height: auto; padding: 0.75rem;" readonly>
+            </div>
+
+            <!-- Conversion Formula Card -->
+            <div style="background-color: rgba(30, 48, 40, 0.15); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 0.75rem 1rem; font-size: 0.85rem; color: var(--color-text-muted);">
+              <span>Conversion Factor: </span>
+              <strong id="conversion-formula" style="color: var(--color-accent-hover);">--</strong>
+            </div>
+          </div>
+
+          <!-- Quick Reference Table Card -->
+          <div class="panel-card">
+            <div class="panel-card-title">
+              <span>Quick Reference Scale</span>
+            </div>
+
+            <div style="overflow-x: auto;">
+              <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                <thead>
+                  <tr style="background-color: rgba(10, 12, 11, 0.4); border-bottom: 2px solid var(--color-border); text-align: left;">
+                    <th style="padding: 0.5rem 0.75rem; color: var(--color-text-muted); font-size: 0.8rem; text-transform: uppercase;">Input Quantity</th>
+                    <th style="padding: 0.5rem 0.75rem; color: var(--color-text-muted); font-size: 0.8rem; text-transform: uppercase;">Equivalence</th>
+                  </tr>
+                </thead>
+                <tbody id="quick-reference-table">
+                  <!-- Dynamically populated reference rows -->
+                </tbody>
+              </table>
+            </div>
+
+            <div style="font-size: 0.8rem; color: var(--color-text-muted); margin-top: 1rem; line-height: 1.5; border-top: 1px solid var(--color-border); padding-top: 0.75rem;">
+              ⚖️ Precision formatting dynamically manages scientific notation for ultra-small micro-units and planetary-scale values.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO Explainer -->
+    <section class="tool-explainer">
+      <div class="container explainer-content">
+        <h2>What is an Engineering &amp; Multi-Unit Converter?</h2>
+        <p>An <strong>engineering unit converter</strong> is a comprehensive digital conversion suite designed to translate physical quantities between the International System of Units (SI metric) and British Imperial or US Customary systems. While basic calculators only convert feet to meters or pounds to kilograms, engineering projects, mechanical repair shops, industrial piping, and international travel demand specialized conversions across pressure, torque, electricity, fluid flow, and thermal dynamics. Our converter runs 100% locally in your web browser for lightning-fast calculations without latency.</p>
+
+        <h2>How to Convert Units Online</h2>
+        <ol>
+          <li><strong>Select Category:</strong> Choose your target measurement family from the category dropdown (such as Pressure, Torque, Travel Voltage, or Temperature).</li>
+          <li><strong>Enter Value:</strong> Type any numerical value into the <em>From Value</em> field. Scientific notation and decimal points are supported.</li>
+          <li><strong>Select Origin and Target Units:</strong> Choose your starting unit and desired destination unit from the dropdown lists, or click a pre-configured quick preset pill.</li>
+          <li><strong>Instant Result:</strong> The converted value computes automatically as you type, alongside the exact mathematical formula and an expanded reference comparison table.</li>
+        </ol>
+
+        <h2>Specialized Engineering Units Guide</h2>
+        <p>Explore the specialized categories supported across our engineering conversion matrix:</p>
+
+        <h3>Pressure &amp; Tyre Pressure Unit Converter</h3>
+        <p>Navigating a <strong>unit converter of pressure</strong> is common for motorists, HVAC engineers, and scuba divers. Automotive tyre placards typically state recommendations in either pounds per square inch (psi) or bar. Our <strong>tyre pressure unit converter</strong> lets you translate vehicle pressure ratings (e.g., 32 psi to 2.21 bar or 220.6 kPa) instantly. In scientific laboratories, standard atmospheres (atm) and millimeters of mercury (mmHg) translate directly to industrial barometric scales.</p>
+
+        <h3>Torque Unit Converter (Mechanical &amp; Automotive)</h3>
+        <p>A reliable <strong>torque unit converter</strong> (or <strong>unit torque converter</strong>) is indispensable when torquing engine cylinder head bolts, lug nuts, or bicycle carbon fiber components. In North America, torque wrenches are predominantly calibrated in foot-pounds (ft-lb) or inch-pounds (in-lb), whereas European and Asian workshop manuals prescribe Newton-meters (N·m). One foot-pound equates to approximately 1.3558 N·m, and 1 N·m equals 8.8507 in-lb.</p>
+
+        <h3>United Kingdom Voltage Converter &amp; Travel Guide</h3>
+        <p>International travelers frequently search for a <strong>united kingdom voltage converter</strong>. The United Kingdom operates on a <strong>230V 50Hz</strong> alternating current power grid, whereas North American wall sockets deliver <strong>120V 60Hz</strong>. Before plugging American electronics into a UK wall socket via a mechanical travel plug adapter, you must check the power rating label on the device. Dual-voltage devices (marked <code>Input: 100-240V, 50/60Hz</code>, common on smartphones and laptops) only require a physical plug adapter. However, single-voltage 120V heating appliances (such as curling irons, hairdryers, and blenders) require an active step-down transformer to prevent fire hazard and motor destruction.</p>
+
+        <h3>Electrical Current (Ampere Unit Converter)</h3>
+        <p>Our <strong>ampere unit converter</strong> allows electrical engineers and circuit hobbyists to switch between amperes (A), milliamperes (mA), microamperes (µA), and kiloamperes (kA). Sizing household circuit breakers and microcontroller sensor power draw requires seamless translation between microamps and full amperes.</p>
+
+        <h3>Fluid Flow Rate and Material Density</h3>
+        <p>Hydraulic designers and HVAC specialists utilize our <strong>flow rate unit converter</strong> to translate volumetric discharge between Liters per minute (L/min), cubic meters per hour (m³/h), cubic feet per minute (CFM), and US gallons per minute (GPM). Meanwhile, our <strong>density unit converter</strong> calculates mass per volume (kg/m³, g/cm³, lb/ft³) for metallurgy and civil structural analysis.</p>
+
+        <h3>Moment of Inertia and Thermal BTU Energy</h3>
+        <p>Mechanical design engineers calculating rotational dynamics rely on our <strong>moment of inertia unit converter</strong> (kg·m² to lb·ft² or lb·in²) to evaluate motor torque acceleration. For climate control and thermodynamics, our <strong>unit converter btu</strong> translates British Thermal Units into Joules, Calories, and Kilowatt-hours (kWh) to evaluate air conditioner cooling capacities and heating efficiency.</p>
+
+        <h2>Standard Reference Conversions &amp; Medical Disclaimer</h2>
+        <p>For specialized reference convenience, our tool provides standardized conversion factors for <strong>blood glucose unit converter</strong> readings (mg/dL to mmol/L using the standard molecular factor of 18.0182) and IT server <strong>rack unit converter</strong> calculations (1U = 1.75 inches = 44.45 mm). When exploring how to <strong>convert mg to international units</strong> for vitamins, note that International Units (IU) reflect biological activity and differ per substance (for Vitamin D3, 1 mcg = 40 IU; for natural Vitamin E, 1 mg = 1.49 IU). All reference conversions are strictly informational and do not replace professional medical or nutritional consultation.</p>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-accordion">
+          
+          <details class="faq-item">
+            <summary>How do I convert between metric and imperial pressure units?</summary>
+            <div class="faq-answer">
+              <p>Pressure conversion relies on standard physical factors: 1 bar equals 100,000 Pascals (100 kPa) or approximately 14.5038 psi. For vehicle tyre pressure, 32 psi converts to approximately 2.21 bar or 220.6 kPa.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Why do travelers need a United Kingdom voltage converter?</summary>
+            <div class="faq-answer">
+              <p>The United Kingdom operates on 230 volts at 50 Hz, whereas North America operates on 120 volts at 60 Hz. American travelers visiting the UK must verify whether their appliances (like hairdryers or power supplies) are dual-voltage (100-240V) or require an active step-down transformer in addition to a plug adapter to avoid damaging electronics.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What are torque units (N·m and ft-lb) used for in engineering?</summary>
+            <div class="faq-answer">
+              <p>Torque measures rotational or twisting force around an axis. Mechanical engineers and automotive technicians use Newton-meters (N·m) in metric contexts and foot-pounds (ft-lb) in imperial contexts. One foot-pound equals approximately 1.3558 Newton-meters.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is moment of inertia and why do engineers calculate it?</summary>
+            <div class="faq-answer">
+              <p>Moment of inertia (expressed in kg·m² or lb·ft²) measures a rigid body's rotational resistance to angular acceleration around a given pivot axis. It is critical for sizing electric motors, flywheels, robotic arms, and rotating industrial machinery.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How are blood glucose and supplement international units (IU) converted?</summary>
+            <div class="faq-answer">
+              <p>Blood glucose is measured in mg/dL in the US and mmol/L in the UK and internationally, using a standard biochemical factor of 18.0182 (e.g., 90 mg/dL ÷ 18.0182 = 5.0 mmol/L). Supplement International Units (IU) convert based on substance-specific mass standards (for Vitamin D3, 1 mcg = 40 IU; for natural Vitamin E d-alpha-tocopherol, 1 mg = 1.49 IU). These reference values are informational and must be verified against product packaging or with a healthcare professional.</p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+      <!-- Related Tools -->
+    <section class="related-tools-section">
+      <div class="container">
+        <h2>Related Tools</h2>
+        <div class="cards-grid">
+          <a href="/tools/bmi-calculator" class="tool-card">
+            <div class="tool-card-header">
+              <div class="tool-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              </div>
+            </div>
+            <h3 class="tool-card-name">BMI Calculator</h3>
+            <p class="tool-card-desc">Calculate standard BMI, reverse target weight, amputee-adjusted BMI, and pet dog BMI.</p>
+          </a>
+          <a href="/tools/percentage-calculator" class="tool-card">
+            <div class="tool-card-header">
+              <div class="tool-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+              </div>
+            </div>
+            <h3 class="tool-card-name">Percentage Calculator</h3>
+            <p class="tool-card-desc">Calculate percentage off discounts, percent increase/decrease, differences, and reverse values.</p>
+          </a>
+          <a href="/tools/age-calculator" class="tool-card">
+            <div class="tool-card-header">
+              <div class="tool-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+              </div>
+            </div>
+            <h3 class="tool-card-name">Age Calculator</h3>
+            <p class="tool-card-desc">Calculate your chronological age, age difference between two people, or baby's corrected age.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Injected Footer Placeholder -->
+  <footer id="site-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/tools-data.js"></script>
+  <script src="../assets/js/theme-toggle.js"></script>
+  <script src="../assets/js/header.js"></script>
+  <script src="../assets/js/footer.js"></script>
+  <script src="../assets/js/nav-mega-menu.js"></script>
+  <script src="../assets/js/tools/unit-converter.js"></script>
+</body>
+</html>
